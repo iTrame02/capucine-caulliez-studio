@@ -120,7 +120,11 @@ section { padding: clamp(80px, 11vw, 150px) 0; }
 .shot { break-inside: avoid; margin: 0 0 16px; cursor: zoom-in; position: relative; overflow: hidden; background: var(--sand); }
 .shot img { width: 100%; height: auto; transition: transform 1.1s cubic-bezier(.2,.7,.2,1), opacity .5s; }
 .shot:hover img { transform: scale(1.03); }
-.shot.hide { display: none; }
+.shot.hide, .shot.fold { display: none; }
+.more-wrap { display: none; justify-content: center; margin-top: 30px; }
+.more-wrap.on { display: flex; }
+.more-btn { background: none; border: 1px solid var(--ink); color: var(--ink); padding: 14px 26px; cursor: pointer; transition: background .3s, color .3s; }
+.more-btn:hover { background: var(--ink); color: var(--paper); }
 .count { text-align: center; margin-top: 26px; color: var(--muted); font-family: var(--display); font-style: italic; }
 
 /* Prestations */
@@ -242,6 +246,7 @@ footer small { font-size: 12px; letter-spacing: .08em; }
   <div class="wrap">
     <a class="logo" href="#accueil" aria-label="Capucine Caulliez Studio, accueil"><img src="images/logo-cc.png" alt="CC" width="226" height="290"></a>
     <nav aria-label="Navigation">
+      <a class="caps sm" href="#accueil"><span class="fr">Accueil</span><span class="en">Home</span></a>
       <a class="caps sm" href="#portfolio"><span class="fr">Portfolio</span><span class="en">Portfolio</span></a>
       <a class="caps sm" href="#livres"><span class="fr">Livres</span><span class="en">Books</span></a>
       <a class="caps sm" href="#a-propos"><span class="fr">À propos</span><span class="en">About</span></a>
@@ -413,6 +418,7 @@ footer small { font-size: 12px; letter-spacing: .08em; }
         <figure class="shot" data-s="taste" data-cap="Saveurs" data-full="images/img_nes_8340.webp"><img src="images/img_nes_8340-s.webp" alt="Saveurs — Nespresso" width="900" height="600" loading="lazy"></figure>
         <figure class="shot" data-s="city" data-cap="Lumière" data-full="images/img_5829.webp"><img src="images/img_5829-s.webp" alt="Lumière" width="720" height="900" loading="lazy"></figure>
         <figure class="shot" data-s="city" data-cap="Lumière" data-full="images/img_5842.webp"><img src="images/img_5842-s.webp" alt="Lumière" width="719" height="900" loading="lazy"></figure></div>
+      <div class="more-wrap" id="moreWrap"><button class="more-btn caps sm" id="moreBtn" type="button"></button></div>
       <p class="count" id="count"></p>
     </div>
   </section>
@@ -572,12 +578,33 @@ footer small { font-size: 12px; letter-spacing: .08em; }
   const filterBtns = [...document.querySelectorAll('.gallery-bar button')];
   const serieBtns = [...document.querySelectorAll('.serie')];
   const countEl = document.getElementById('count');
+  // Sur téléphone, on n'affiche que les premières photos de la série, avec un bouton pour voir la suite
+  const mobile = window.matchMedia('(max-width: 760px)');
+  const LIMIT = 6;
+  const moreWrap = document.getElementById('moreWrap'), moreBtn = document.getElementById('moreBtn');
+  let expanded = false;
   function updateCount() {
-    const n = shots.filter(s => !s.classList.contains('hide')).length;
+    const inFilter = shots.filter(s => !s.classList.contains('hide'));
+    const fold = mobile.matches && !expanded && inFilter.length > LIMIT;
+    inFilter.forEach((s, i) => s.classList.toggle('fold', fold && i >= LIMIT));
+    shots.filter(s => s.classList.contains('hide')).forEach(s => s.classList.remove('fold'));
     const en = document.body.classList.contains('lang-en');
-    countEl.textContent = n + (en ? ' photographs' : ' photographies');
+    const n = inFilter.length;
+    moreWrap.classList.toggle('on', mobile.matches && n > LIMIT);
+    moreBtn.textContent = expanded
+      ? (en ? 'Show fewer photos' : 'Voir moins de photos')
+      : (en ? 'See all ' + n + ' photographs' : 'Voir les ' + n + ' photographies');
+    countEl.textContent = fold
+      ? LIMIT + ' / ' + n + (en ? ' photographs' : ' photographies')
+      : n + (en ? ' photographs' : ' photographies');
   }
+  moreBtn.addEventListener('click', () => {
+    expanded = !expanded; updateCount();
+    if (!expanded) document.querySelector('.gallery-bar').scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+  if (mobile.addEventListener) mobile.addEventListener('change', updateCount);
   function applyFilter(f) {
+    expanded = false;
     filterBtns.forEach(b => b.setAttribute('aria-pressed', b.dataset.f === f));
     serieBtns.forEach(b => b.setAttribute('aria-pressed', b.dataset.f === f));
     shots.forEach(s => s.classList.toggle('hide', f !== 'all' && s.dataset.s !== f));

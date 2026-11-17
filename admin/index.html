@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Dashboard · Capucine Caulliez Studio</title>
+<link rel="icon" type="image/png" href="/images/logo-cc.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Hanken+Grotesk:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+/* Dashboard dans la DA du site : lin, encre expresso, taupe. Barre du haut + onglets, contenu en cartes. */
+:root {
+  --linen: #EEE9E1; --paper: #F6F2EC; --sand: #E3DBD0; --ink: #2C231C; --taupe: #8E7B68;
+  --muted: #776C62; --line: #D5CCC0; --espresso: #241D18; --ok: #4E7A55; --warn: #A8662E; --danger: #9E3B32;
+  --display: "Cormorant Garamond", Garamond, "Times New Roman", serif;
+  --body: "Hanken Grotesk", "Helvetica Neue", Arial, sans-serif;
+  color-scheme: light;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { background: var(--linen); color: var(--ink); font-family: var(--body); font-size: 15px; line-height: 1.5; -webkit-font-smoothing: antialiased; }
+img { max-width: 100%; display: block; }
+a { color: inherit; text-decoration: none; }
+button, input, textarea, select { font: inherit; color: inherit; }
+button { cursor: pointer; }
+:focus-visible { outline: 2px solid var(--taupe); outline-offset: 2px; }
+.caps { font-family: var(--display); font-weight: 600; text-transform: uppercase; letter-spacing: .24em; font-size: 12px; }
+h1, h2, h3 { font-family: var(--display); font-weight: 500; text-transform: uppercase; letter-spacing: .14em; text-wrap: balance; }
+h2 { font-size: 22px; } h3 { font-size: 16px; letter-spacing: .16em; }
+.muted { color: var(--muted); }
+.hidden { display: none !important; }
+
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; border: 1px solid var(--ink); background: transparent; padding: 10px 18px; font-size: 13px; font-weight: 500; transition: background .2s, color .2s, opacity .2s; white-space: nowrap; }
+.btn:hover { background: var(--ink); color: var(--paper); }
+.btn.primary { background: var(--ink); color: var(--paper); }
+.btn.primary:hover { background: #4A3D33; }
+.btn.primary:disabled { opacity: .45; cursor: default; }
+.btn.small { padding: 6px 12px; font-size: 12px; }
+.btn.ghost { border-color: var(--line); }
+.btn.danger { border-color: var(--danger); color: var(--danger); }
+.btn.danger:hover { background: var(--danger); color: #fff; }
+.icon { width: 32px; height: 32px; display: inline-grid; place-items: center; border: 1px solid var(--line); background: var(--paper); border-radius: 50%; font-size: 14px; line-height: 1; transition: background .2s; }
+.icon:hover { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+.icon:disabled { opacity: .3; cursor: default; background: var(--paper); color: var(--ink); }
+.icon svg { width: 15px; height: 15px; }
+
+input[type=text], input[type=password], input[type=email], input[type=tel], textarea, select {
+  width: 100%; background: var(--paper); border: 1px solid var(--line); padding: 10px 12px; border-radius: 0; font-size: 15px; transition: border-color .2s, background .2s;
+}
+input:focus, textarea:focus, select:focus { outline: none; border-color: var(--ink); background: #fff; }
+textarea { resize: vertical; min-height: 44px; line-height: 1.5; }
+label.field { display: grid; gap: 6px; }
+label.field > span { font-size: 12px; color: var(--muted); font-weight: 500; letter-spacing: .04em; }
+
+/* Connexion */
+.login { min-height: 100vh; display: grid; place-items: center; padding: 24px; }
+.login form { width: min(380px, 100%); display: grid; gap: 18px; text-align: center; justify-items: center; }
+.login img { height: 72px; width: auto; }
+.login p { color: var(--muted); }
+.login .err { color: var(--danger); min-height: 1.5em; font-size: 14px; }
+
+/* Barre du haut */
+.top { position: sticky; top: 0; z-index: 20; background: rgba(238,233,225,.94); backdrop-filter: blur(10px); border-bottom: 1px solid var(--line); }
+.top .row { max-width: 1240px; margin: 0 auto; padding: 12px clamp(14px, 3vw, 32px); display: flex; align-items: center; gap: 16px; }
+.top .brand { display: flex; align-items: center; gap: 12px; margin-right: auto; text-decoration: none; }
+.top .brand img { height: 38px; width: auto; }
+.status { display: inline-flex; align-items: center; gap: 8px; font-size: 13px; color: var(--muted); }
+.status::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--ok); }
+.status.dirty { color: var(--warn); }
+.status.dirty::before { background: var(--warn); }
+.status.busy::before { background: var(--taupe); animation: pulse 1s infinite; }
+@keyframes pulse { 50% { opacity: .3; } }
+.tabs { max-width: 1240px; margin: 0 auto; padding: 0 clamp(14px, 3vw, 32px); display: flex; gap: 4px; overflow-x: auto; scrollbar-width: none; }
+.tabs button { background: none; border: 0; border-bottom: 2px solid transparent; padding: 10px 14px 12px; font-family: var(--display); font-weight: 600; text-transform: uppercase; letter-spacing: .2em; font-size: 12px; color: var(--muted); white-space: nowrap; }
+.tabs button[aria-selected="true"] { color: var(--ink); border-color: var(--ink); }
+
+main { max-width: 1240px; margin: 0 auto; padding: 28px clamp(14px, 3vw, 32px) 120px; }
+.panel { display: grid; gap: 22px; }
+.intro { display: grid; gap: 6px; }
+.card { background: var(--paper); border: 1px solid var(--line); padding: clamp(16px, 2.4vw, 26px); display: grid; gap: 18px; }
+
+/* Séries */
+.series-layout { display: grid; grid-template-columns: 290px 1fr; gap: 22px; align-items: start; }
+.series-list { display: grid; gap: 8px; }
+.serie-item { display: grid; grid-template-columns: 52px 1fr auto; gap: 12px; align-items: center; padding: 8px; background: var(--paper); border: 1px solid var(--line); text-align: left; transition: border-color .2s; }
+.serie-item[aria-current="true"] { border-color: var(--ink); background: #fff; }
+.serie-item img { width: 52px; height: 64px; object-fit: cover; border-radius: 26px 26px 0 0; background: var(--sand); }
+.serie-item .nm { font-family: var(--display); font-weight: 600; text-transform: uppercase; letter-spacing: .14em; font-size: 14px; }
+.serie-item .ct { font-size: 12px; color: var(--muted); }
+.serie-item .mv { display: grid; gap: 4px; }
+.serie-item .mv .icon { width: 26px; height: 26px; }
+.two { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.drop { border: 1px dashed var(--taupe); padding: 22px; display: grid; gap: 8px; justify-items: center; text-align: center; background: var(--linen); transition: background .2s; }
+.drop.over { background: var(--sand); }
+.drop p { color: var(--muted); font-size: 13px; }
+.photos { display: grid; grid-template-columns: repeat(auto-fill, minmax(168px, 1fr)); gap: 12px; }
+.ph { position: relative; background: var(--sand); border: 1px solid var(--line); display: grid; }
+.ph img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; }
+.ph .bar { display: flex; flex-wrap: wrap; gap: 4px; justify-content: center; padding: 6px; background: var(--paper); }
+.ph .bar .icon { width: 27px; height: 27px; }
+.ph .imgw { position: relative; }
+.ph .tag { position: absolute; top: 6px; left: 6px; background: var(--ink); color: var(--paper); font-size: 10px; letter-spacing: .14em; text-transform: uppercase; padding: 3px 7px; }
+.ph .new { position: absolute; top: 6px; right: 6px; background: var(--warn); color: #fff; font-size: 10px; padding: 3px 7px; }
+.ph .num { position: absolute; bottom: 6px; left: 6px; background: rgba(36,29,24,.7); color: #fff; font-size: 11px; padding: 1px 7px; }
+.progress { font-size: 13px; color: var(--muted); }
+
+/* Images de la page */
+.slots { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 16px; }
+.slot { display: grid; gap: 10px; }
+.slot img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; background: var(--sand); }
+
+/* Textes */
+.textgroup summary { cursor: pointer; list-style: none; display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.textgroup summary::-webkit-details-marker { display: none; }
+.textgroup summary::after { content: "+"; font-size: 20px; color: var(--taupe); }
+.textgroup[open] summary::after { content: "–"; }
+.textgroup .items { display: grid; gap: 18px; margin-top: 18px; }
+.titem { display: grid; gap: 8px; padding-top: 16px; border-top: 1px solid var(--line); }
+.titem:first-child { border-top: 0; padding-top: 0; }
+
+/* Collabs */
+.rows { display: grid; gap: 8px; }
+.row-edit { display: grid; grid-template-columns: 1fr auto auto auto; gap: 8px; align-items: center; }
+
+/* Fenêtres */
+.modal { position: fixed; inset: 0; z-index: 50; background: rgba(36,29,24,.55); display: grid; place-items: center; padding: 16px; }
+.modal .box { background: var(--paper); width: min(900px, 100%); max-height: 88vh; overflow: auto; padding: clamp(18px, 3vw, 28px); display: grid; gap: 18px; }
+.modal .box.sm { width: min(440px, 100%); }
+.picker { display: grid; grid-template-columns: repeat(auto-fill, minmax(110px, 1fr)); gap: 8px; }
+.picker button { border: 2px solid transparent; padding: 0; background: var(--sand); }
+.picker button:hover { border-color: var(--ink); }
+.picker img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; }
+.actions { display: flex; gap: 10px; justify-content: flex-end; flex-wrap: wrap; }
+
+.toast { position: fixed; left: 50%; bottom: 24px; transform: translateX(-50%); z-index: 60; background: var(--espresso); color: var(--paper); padding: 14px 22px; font-size: 14px; max-width: calc(100% - 32px); box-shadow: 0 10px 30px rgba(0,0,0,.25); }
+.toast.err { background: var(--danger); }
+
+@media (max-width: 860px) {
+  .series-layout { grid-template-columns: 1fr; }
+  .two { grid-template-columns: 1fr; }
+  .top .row { flex-wrap: wrap; }
+  .top .brand span { display: none; }
+}
+@media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; } }
+</style>
+</head>
+<body>
+
+<!-- Connexion -->
+<section class="login" id="loginView">
+  <form id="loginForm">
+    <img src="/images/logo-cc.png" alt="CC">
+    <h1 style="font-size:20px">Espace de Capucine</h1>
+    <p>Connecte-toi pour modifier ton site.</p>
+    <label class="field" style="width:100%;text-align:left"><span>Mot de passe</span><input type="password" id="pw" autocomplete="current-password" required></label>
+    <button class="btn primary" type="submit" style="width:100%">Se connecter</button>
+    <p class="err" id="loginErr" role="alert"></p>
+  </form>
+</section>
+
+<!-- Dashboard -->
+<div id="app" class="hidden">
+  <header class="top">
+    <div class="row">
+      <a class="brand" href="/" target="_blank" rel="noopener"><img src="/images/logo-cc.png" alt="CC"><span class="caps">Dashboard</span></a>
+      <span class="status" id="status">Tout est en ligne</span>
+      <a class="btn ghost small" href="/" target="_blank" rel="noopener">Voir le site</a>
+      <button class="btn ghost small" id="undoBtn" type="button" disabled>Annuler les modifs</button>
+      <button class="btn primary" id="publishBtn" type="button" disabled>Publier</button>
+    </div>
+    <nav class="tabs" role="tablist" aria-label="Sections du dashboard">
+      <button role="tab" data-tab="photos" aria-selected="true">Photos &amp; séries</button>
+      <button role="tab" data-tab="images" aria-selected="false">Images de la page</button>
+      <button role="tab" data-tab="textes" aria-selected="false">Textes</button>
+      <button role="tab" data-tab="collabs" aria-selected="false">Collaborations</button>
+      <button role="tab" data-tab="contact" aria-selected="false">Contact</button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="panel" data-panel="photos">
+      <div class="intro"><h2>Photos &amp; séries</h2><p class="muted">Choisis une série pour ajouter, trier ou supprimer ses photos. Rien n'apparaît sur le site avant que tu cliques sur « Publier ».</p></div>
+      <div class="series-layout">
+        <div class="series-list">
+          <div id="seriesList" class="series-list"></div>
+          <button class="btn ghost" id="addSerie" type="button">+ Nouvelle série</button>
+        </div>
+        <div class="card" id="serieEditor"></div>
+      </div>
+    </section>
+
+    <section class="panel hidden" data-panel="images">
+      <div class="intro"><h2>Images de la page</h2><p class="muted">Les grandes photos fixes du site : les trois du haut, ton portrait et le fond de la citation.</p></div>
+      <div class="slots" id="slots"></div>
+    </section>
+
+    <section class="panel hidden" data-panel="textes">
+      <div class="intro"><h2>Textes</h2><p class="muted">Tous les textes du site, rangés par partie, en français et en anglais.</p></div>
+      <div id="texts" class="panel"></div>
+    </section>
+
+    <section class="panel hidden" data-panel="collabs">
+      <div class="intro"><h2>Collaborations</h2><p class="muted">Les noms affichés dans le bandeau « En collaboration avec », dans cet ordre.</p></div>
+      <div class="card"><div class="rows" id="collabRows"></div><div><button class="btn ghost" id="addCollab" type="button">+ Ajouter une collaboration</button></div></div>
+    </section>
+
+    <section class="panel hidden" data-panel="contact">
+      <div class="intro"><h2>Contact</h2><p class="muted">Ces infos s'affichent dans la partie Contact et servent au formulaire.</p></div>
+      <div class="card">
+        <label class="field"><span>E-mail (reçoit les demandes du formulaire)</span><input type="email" data-contact="email"></label>
+        <label class="field"><span>Téléphone</span><input type="tel" data-contact="telephone"></label>
+        <label class="field"><span>Instagram (sans le @)</span><input type="text" data-contact="instagram"></label>
+      </div>
+    </section>
+  </main>
+</div>
+
+<div id="modalRoot"></div>
+
+<script>
+(() => {
+  const API = '/api';
+  const SLOT_LABELS = {
+    'accueil.gauche': ['Accueil, à gauche', 'src'], 'accueil.milieu': ['Accueil, au milieu (arche)', 'full'], 'accueil.droite': ['Accueil, à droite', 'src'],
+    'apropos.portrait': ['Ton portrait (À propos)', 'full'], 'citation.fond': ['Fond de la citation', 'full']
+  };
+  const PLAIN_LABELS = {
+    'accueil.piliers': ['accueil', 'Mots sous le logo'], 'livre1.titre': ['livres', 'Titre du livre 1'], 'livre1.lieux': ['livres', 'Lieux du livre 1 (avant la date)'],
+    'livre2.titre': ['livres', 'Titre du livre 2'], 'livre2.lieux': ['livres', 'Lieux du livre 2 (avant la date)']
+  };
+
+  let token = null, state = null, saved = '', pending = [], previews = {}, current = null;
+  try { token = localStorage.getItem('cc_token'); } catch (e) {}
+
+  const $ = s => document.querySelector(s);
+  const el = (tag, attrs = {}, kids = []) => {
+    const n = document.createElement(tag);
+    for (const [k, v] of Object.entries(attrs)) {
+      if (k === 'class') n.className = v; else if (k === 'text') n.textContent = v; else if (k === 'html') n.innerHTML = v;
+      else if (k.startsWith('on')) n.addEventListener(k.slice(2), v); else if (v !== false && v != null) n.setAttribute(k, v === true ? '' : v);
+    }
+    [].concat(kids).forEach(c => c != null && n.append(c));
+    return n;
+  };
+  const ICON = {
+    left: '<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M10 3 5 8l5 5"/></svg>',
+    right: '<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="m6 3 5 5-5 5"/></svg>',
+    up: '<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 10l5-5 5 5"/></svg>',
+    down: '<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="m3 6 5 5 5-5"/></svg>',
+    star: '<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><path d="m8 2 1.8 3.9 4.2.5-3.1 2.9.8 4.2L8 11.4 4.3 13.5l.8-4.2L2 6.4l4.2-.5z"/></svg>',
+    trash: '<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M3 4.5h10M6.5 4.5V3h3v1.5M4.5 4.5l.7 9h5.6l.7-9"/></svg>',
+    move: '<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M2 8h12M10 4l4 4-4 4"/></svg>'
+  };
+  const iconBtn = (name, label, fn, disabled) => el('button', { class: 'icon', type: 'button', title: label, 'aria-label': label, html: ICON[name], onclick: fn, disabled: !!disabled });
+  const url = p => previews[p] || ('/' + p);
+  const decode = h => { const t = document.createElement('textarea'); t.innerHTML = h; return t.value; };
+  const encode = s => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/\n/g, '<br>');
+  const fromHtml = h => decode(String(h).replace(/<br\s*\/?>/gi, '\n'));
+
+  function toast(msg, err) {
+    const t = el('div', { class: 'toast' + (err ? ' err' : ''), role: 'status', text: msg });
+    document.body.append(t); setTimeout(() => t.remove(), err ? 6000 : 3500);
+  }
+  function modal(build, small) {
+    const root = $('#modalRoot'); const box = el('div', { class: 'box' + (small ? ' sm' : '') });
+    const wrap = el('div', { class: 'modal', role: 'dialog', 'aria-modal': 'true' }, box);
+    const close = () => wrap.remove();
+    wrap.addEventListener('click', e => { if (e.target === wrap) close(); });
+    document.addEventListener('keydown', function k(e) { if (e.key === 'Escape') { close(); document.removeEventListener('keydown', k); } });
+    build(box, close); root.append(wrap);
+  }
+  function confirmBox(title, text, okLabel, fn) {
+    modal((box, close) => {
+      box.append(el('h3', { text: title }), el('p', { class: 'muted', text }),
+        el('div', { class: 'actions' }, [el('button', { class: 'btn ghost', type: 'button', text: 'Annuler', onclick: close }),
+          el('button', { class: 'btn danger', type: 'button', text: okLabel, onclick: () => { close(); fn(); } })]));
+    }, true);
+  }
+
+  async function api(path, opts = {}) {
+    const r = await fetch(API + path, { ...opts, headers: { 'Content-Type': 'application/json', ...(token ? { Authorization: 'Bearer ' + token } : {}) } });
+    const data = await r.json().catch(() => ({}));
+    if (r.status === 401 && path !== '/login') { logout(); throw new Error(data.error || 'Session expirée'); }
+    if (!r.ok) throw new Error(data.error || ('Erreur ' + r.status));
+    return data;
+  }
+
+  // ---------- Connexion ----------
+  $('#loginForm').addEventListener('submit', async e => {
+    e.preventDefault(); $('#loginErr').textContent = '';
+    try {
+      const { token: t } = await api('/login', { method: 'POST', body: JSON.stringify({ password: $('#pw').value }) });
+      token = t; try { localStorage.setItem('cc_token', t); } catch (e) {}
+      await start();
+    } catch (err) { $('#loginErr').textContent = err.message; }
+  });
+  function logout() { token = null; try { localStorage.removeItem('cc_token'); } catch (e) {} $('#app').classList.add('hidden'); $('#loginView').classList.remove('hidden'); }
+
+  async function start() {
+    const { content } = await api('/content');
+    state = content; saved = JSON.stringify(state); pending = [];
+    current = current && state.series.some(s => s.id === current) ? current : (state.series[0] && state.series[0].id);
+    $('#loginView').classList.add('hidden'); $('#app').classList.remove('hidden');
+    renderAll();
+  }
+
+  // ---------- État ----------
+  function changed() {
+    const dirty = JSON.stringify(state) !== saved || pending.length > 0;
+    const st = $('#status');
+    st.className = 'status' + (dirty ? ' dirty' : '');
+    st.textContent = dirty ? 'Modifications pas encore publiées' : 'Tout est en ligne';
+    $('#publishBtn').disabled = !dirty; $('#undoBtn').disabled = !dirty;
+  }
+  addEventListener('beforeunload', e => { if (!$('#publishBtn').disabled) { e.preventDefault(); e.returnValue = ''; } });
+  const renderAll = () => { renderSeries(); renderSlots(); renderTexts(); renderCollabs(); renderContact(); changed(); };
+
+  $('#undoBtn').addEventListener('click', () => confirmBox('Annuler les modifications ?', 'Tout ce que tu as changé depuis la dernière publication sera perdu.', 'Tout annuler', async () => {
+    try { await start(); toast('Modifications annulées.'); } catch (e) { toast(e.message, true); }
+  }));
+
+  $('#publishBtn').addEventListener('click', async () => {
+    const b = $('#publishBtn'), st = $('#status');
+    b.disabled = true; st.className = 'status busy'; st.textContent = 'Publication en cours…';
+    try {
+      await api('/publish', { method: 'POST', body: JSON.stringify({ content: state, files: pending }) });
+      saved = JSON.stringify(state); pending = [];
+      changed(); toast('Publié ! Le site sera à jour dans environ une minute.');
+    } catch (e) { changed(); toast('La publication a échoué : ' + e.message, true); }
+  });
+
+  // ---------- Onglets ----------
+  document.querySelectorAll('.tabs button').forEach(b => b.addEventListener('click', () => {
+    document.querySelectorAll('.tabs button').forEach(x => x.setAttribute('aria-selected', x === b));
+    document.querySelectorAll('[data-panel]').forEach(p => p.classList.toggle('hidden', p.dataset.panel !== b.dataset.tab));
+    scrollTo({ top: 0 });
+  }));
+
+  // ---------- Photos & séries ----------
+  const photosOf = id => state.photos.filter(p => p.s === id);
+  function moveSerie(i, d) { const a = state.series; [a[i], a[i + d]] = [a[i + d], a[i]]; renderSeries(); changed(); }
+  function renderSeries() {
+    const list = $('#seriesList'); list.innerHTML = '';
+    state.series.forEach((s, i) => {
+      const n = photosOf(s.id).length;
+      list.append(el('div', { class: 'serie-item', 'aria-current': s.id === current }, [
+        el('img', { src: s.cover ? url(s.cover) : '', alt: '' }),
+        el('button', { type: 'button', style: 'background:none;border:0;text-align:left;padding:0', onclick: () => { current = s.id; renderSeries(); } },
+          [el('div', { class: 'nm', text: decode(s.fr) || 'Sans nom' }), el('div', { class: 'ct', text: n + ' photo' + (n > 1 ? 's' : '') })]),
+        el('div', { class: 'mv' }, [iconBtn('up', 'Monter la série', () => moveSerie(i, -1), i === 0), iconBtn('down', 'Descendre la série', () => moveSerie(i, 1), i === state.series.length - 1)])
+      ]));
+    });
+    renderEditor();
+  }
+  $('#addSerie').addEventListener('click', () => {
+    const id = 's' + Date.now().toString(36);
+    state.series.push({ id, fr: 'Nouvelle série', en: 'New series', cover: '' });
+    current = id; renderSeries(); changed();
+  });
+
+  function renderEditor() {
+    const box = $('#serieEditor'); box.innerHTML = '';
+    const s = state.series.find(x => x.id === current);
+    if (!s) { box.append(el('p', { class: 'muted', text: 'Crée une série pour commencer.' })); return; }
+    const list = photosOf(s.id);
+    const nameFr = el('input', { type: 'text', value: decode(s.fr), oninput: e => { s.fr = encode(e.target.value); changed(); }, onchange: renderSeries });
+    const nameEn = el('input', { type: 'text', value: decode(s.en), oninput: e => { s.en = encode(e.target.value); changed(); } });
+    box.append(
+      el('div', { style: 'display:flex;justify-content:space-between;gap:12px;align-items:center;flex-wrap:wrap' }, [
+        el('h3', { text: decode(s.fr) || 'Série' }),
+        el('button', { class: 'btn danger small', type: 'button', text: 'Supprimer la série', onclick: () => confirmBox('Supprimer « ' + decode(s.fr) + ' » ?',
+          list.length ? 'La série et ses ' + list.length + ' photos disparaîtront du site.' : 'La série disparaîtra du site.', 'Supprimer', () => {
+            state.photos = state.photos.filter(p => p.s !== s.id); state.series = state.series.filter(x => x.id !== s.id);
+            current = state.series[0] && state.series[0].id; renderSeries(); changed();
+          }) })
+      ]),
+      el('div', { class: 'two' }, [el('label', { class: 'field' }, [el('span', { text: 'Nom en français' }), nameFr]), el('label', { class: 'field' }, [el('span', { text: 'Nom en anglais' }), nameEn])])
+    );
+    // zone d'ajout
+    const input = el('input', { type: 'file', accept: 'image/*', multiple: true, class: 'hidden', onchange: e => addFiles(e.target.files, s.id) });
+    const prog = el('p', { class: 'progress', id: 'prog' });
+    const drop = el('div', { class: 'drop' }, [
+      el('button', { class: 'btn primary', type: 'button', text: 'Ajouter des photos', onclick: () => input.click() }),
+      el('p', { text: 'ou glisse-les ici. Elles sont redimensionnées automatiquement.' }), input, prog
+    ]);
+    drop.addEventListener('dragover', e => { e.preventDefault(); drop.classList.add('over'); });
+    drop.addEventListener('dragleave', () => drop.classList.remove('over'));
+    drop.addEventListener('drop', e => { e.preventDefault(); drop.classList.remove('over'); addFiles(e.dataTransfer.files, s.id); });
+    box.append(drop);
+
+    if (!list.length) { box.append(el('p', { class: 'muted', text: 'Aucune photo dans cette série pour l’instant.' })); return; }
+    box.append(el('p', { class: 'muted', text: 'Les premières photos sont celles que l’on voit en premier (6 sur téléphone). L’étoile choisit la couverture de la série.' }));
+    const grid = el('div', { class: 'photos' });
+    list.forEach((p, i) => {
+      const gi = state.photos.indexOf(p);
+      const swap = d => { const j = state.photos.indexOf(list[i + d]); [state.photos[gi], state.photos[j]] = [state.photos[j], state.photos[gi]]; renderEditor(); changed(); };
+      const isCover = s.cover === p.src;
+      grid.append(el('div', { class: 'ph' }, [
+        el('div', { class: 'imgw' }, [
+          el('img', { src: url(p.src), alt: '', loading: 'lazy' }),
+          isCover ? el('span', { class: 'tag', text: 'Couverture' }) : null,
+          pending.some(f => f.path === p.src) ? el('span', { class: 'new', text: 'Nouvelle' }) : null,
+          el('span', { class: 'num', text: String(i + 1) })
+        ]),
+        el('div', { class: 'bar' }, [
+          iconBtn('left', 'Avancer', () => swap(-1), i === 0),
+          iconBtn('right', 'Reculer', () => swap(1), i === list.length - 1),
+          iconBtn('star', 'Mettre en couverture', () => { s.cover = p.src; renderSeries(); changed(); }, isCover),
+          iconBtn('move', 'Déplacer vers une autre série', () => moveTo(p)),
+          iconBtn('trash', 'Supprimer la photo', () => confirmBox('Supprimer cette photo ?', 'Elle disparaîtra du site après publication.', 'Supprimer', () => {
+            state.photos.splice(state.photos.indexOf(p), 1);
+            if (s.cover === p.src) { const f = photosOf(s.id)[0]; s.cover = f ? f.src : ''; }
+            renderSeries(); changed();
+          }))
+        ])
+      ]));
+    });
+    box.append(grid);
+  }
+  function moveTo(p) {
+    modal((box, close) => {
+      box.append(el('h3', { text: 'Déplacer vers…' }));
+      const list = el('div', { class: 'rows' });
+      state.series.filter(s => s.id !== p.s).forEach(s => list.append(el('button', { class: 'btn ghost', type: 'button', text: decode(s.fr), onclick: () => {
+        const from = state.series.find(x => x.id === p.s);
+        state.photos.splice(state.photos.indexOf(p), 1); p.s = s.id; state.photos.push(p);
+        if (from && from.cover === p.src) { const f = photosOf(from.id)[0]; from.cover = f ? f.src : ''; }
+        if (!s.cover) s.cover = p.src;
+        close(); renderSeries(); changed(); toast('Photo déplacée dans « ' + decode(s.fr) + ' ».');
+      } })));
+      box.append(list, el('div', { class: 'actions' }, el('button', { class: 'btn ghost', type: 'button', text: 'Annuler', onclick: close })));
+    }, true);
+  }
+
+  // Redimensionne l'image dans le navigateur : 1800 px (vue en grand) et 900 px (galerie)
+  async function resize(file, max) {
+    const img = await new Promise((ok, ko) => { const i = new Image(); i.onload = () => ok(i); i.onerror = () => ko(new Error('Format non lu : ' + file.name)); i.src = URL.createObjectURL(file); });
+    const r = Math.min(1, max / Math.max(img.naturalWidth, img.naturalHeight));
+    const w = Math.round(img.naturalWidth * r), h = Math.round(img.naturalHeight * r);
+    const c = document.createElement('canvas'); c.width = w; c.height = h;
+    c.getContext('2d').drawImage(img, 0, 0, w, h);
+    let blob = await new Promise(ok => c.toBlob(ok, 'image/webp', 0.82));
+    let ext = 'webp';
+    if (!blob || blob.type !== 'image/webp') { blob = await new Promise(ok => c.toBlob(ok, 'image/jpeg', 0.86)); ext = 'jpg'; }
+    return { blob, w, h, ext };
+  }
+  const b64 = blob => new Promise(ok => { const r = new FileReader(); r.onload = () => ok(String(r.result).split(',')[1]); r.readAsDataURL(blob); });
+  async function uploadOne(file) {
+    const id = Date.now().toString(36) + Math.random().toString(36).slice(2, 6);
+    const big = await resize(file, 1800), small = await resize(file, 900);
+    const fullPath = 'images/up/' + id + '.' + big.ext, smallPath = 'images/up/' + id + '-s.' + small.ext;
+    const [a, b] = await Promise.all([api('/upload', { method: 'POST', body: JSON.stringify({ data: await b64(big.blob) }) }),
+                                      api('/upload', { method: 'POST', body: JSON.stringify({ data: await b64(small.blob) }) })]);
+    pending.push({ path: fullPath, sha: a.sha }, { path: smallPath, sha: b.sha });
+    previews[fullPath] = URL.createObjectURL(big.blob); previews[smallPath] = URL.createObjectURL(small.blob);
+    return { src: smallPath, full: fullPath, w: small.w, h: small.h };
+  }
+  async function addFiles(files, serieId) {
+    files = [...files].filter(f => f.type.startsWith('image/') || /\.(heic|heif)$/i.test(f.name));
+    if (!files.length) return;
+    const s = state.series.find(x => x.id === serieId); let done = 0, failed = 0;
+    const setProg = () => { const p = $('#prog'); if (p) p.textContent = 'Envoi : ' + done + ' / ' + files.length + (failed ? ' (' + failed + ' en échec)' : ''); };
+    setProg();
+    for (const f of files) {
+      try { const ph = await uploadOne(f); ph.s = serieId; state.photos.push(ph); if (s && !s.cover) s.cover = ph.src; }
+      catch (e) { failed++; console.error(e); toast(e.message, true); }
+      done++; setProg();
+    }
+    renderSeries(); changed();
+    toast(failed ? (done - failed) + ' photo(s) ajoutée(s), ' + failed + ' en échec.' : done + ' photo(s) ajoutée(s). Pense à publier.');
+  }
+
+  // ---------- Images de la page ----------
+  function renderSlots() {
+    const box = $('#slots'); box.innerHTML = '';
+    Object.entries(SLOT_LABELS).forEach(([key, [label, variant]]) => {
+      if (!(key in state.images)) return;
+      box.append(el('div', { class: 'card slot' }, [
+        el('h3', { text: label }),
+        el('img', { src: url(state.images[key]), alt: '' }),
+        el('button', { class: 'btn ghost', type: 'button', text: 'Changer la photo', onclick: () => pick(key, variant) })
+      ]));
+    });
+  }
+  function pick(key, variant) {
+    modal((box, close) => {
+      const input = el('input', { type: 'file', accept: 'image/*', class: 'hidden', onchange: async e => {
+        if (!e.target.files[0]) return;
+        box.querySelector('.progress').textContent = 'Envoi en cours…';
+        try { const ph = await uploadOne(e.target.files[0]); state.images[key] = ph[variant]; close(); renderSlots(); changed(); toast('Photo changée. Pense à publier.'); }
+        catch (err) { toast(err.message, true); }
+      } });
+      const grid = el('div', { class: 'picker' });
+      state.photos.forEach(p => grid.append(el('button', { type: 'button', onclick: () => { state.images[key] = p[variant]; close(); renderSlots(); changed(); } }, el('img', { src: url(p.src), alt: '', loading: 'lazy' }))));
+      box.append(el('div', { style: 'display:flex;justify-content:space-between;gap:12px;align-items:center;flex-wrap:wrap' }, [
+        el('h3', { text: 'Choisir une photo' }),
+        el('div', { class: 'actions' }, [el('button', { class: 'btn primary small', type: 'button', text: 'Importer une nouvelle photo', onclick: () => input.click() }),
+          el('button', { class: 'btn ghost small', type: 'button', text: 'Fermer', onclick: close })])
+      ]), input, el('p', { class: 'progress' }), grid);
+    });
+  }
+
+  // ---------- Textes ----------
+  function autosize(t) { t.style.height = 'auto'; t.style.height = (t.scrollHeight + 2) + 'px'; }
+  function renderTexts() {
+    const box = $('#texts'); box.innerHTML = '';
+    state.sections.forEach((sec, si) => {
+      const keys = state.textOrder.filter(k => k.startsWith(sec.id + '.'));
+      const plains = Object.keys(state.plain || {}).filter(k => PLAIN_LABELS[k] && PLAIN_LABELS[k][0] === sec.id);
+      if (!keys.length && !plains.length) return;
+      const items = el('div', { class: 'items' });
+      plains.forEach(k => {
+        const inp = el('input', { type: 'text', value: decode(state.plain[k]), oninput: e => { state.plain[k] = encode(e.target.value); changed(); } });
+        items.append(el('div', { class: 'titem' }, el('label', { class: 'field' }, [el('span', { text: PLAIN_LABELS[k][1] }), inp])));
+      });
+      keys.forEach(k => {
+        const v = state.texts[k];
+        const mk = lang => { const t = el('textarea', { rows: 1, oninput: e => { v[lang] = encode(e.target.value); autosize(e.target); changed(); } }); t.value = fromHtml(v[lang]); return t; };
+        const fr = mk('fr'), en = mk('en');
+        items.append(el('div', { class: 'titem' }, el('div', { class: 'two' }, [
+          el('label', { class: 'field' }, [el('span', { text: 'Français' }), fr]), el('label', { class: 'field' }, [el('span', { text: 'Anglais' }), en])
+        ])));
+      });
+      const d = el('details', { class: 'card textgroup', open: si < 2 }, [el('summary', {}, [el('h3', { text: sec.label }), el('span', { class: 'muted', style: 'margin-left:auto;font-size:13px', text: (keys.length + plains.length) + ' texte' + (keys.length + plains.length > 1 ? 's' : '') })]), items]);
+      d.addEventListener('toggle', () => d.querySelectorAll('textarea').forEach(autosize));
+      box.append(d);
+    });
+    requestAnimationFrame(() => box.querySelectorAll('details[open] textarea').forEach(autosize));
+  }
+
+  // ---------- Collaborations ----------
+  function renderCollabs() {
+    const box = $('#collabRows'); box.innerHTML = '';
+    state.collabs.forEach((c, i) => {
+      const mv = d => { const a = state.collabs; [a[i], a[i + d]] = [a[i + d], a[i]]; renderCollabs(); changed(); };
+      box.append(el('div', { class: 'row-edit' }, [
+        el('input', { type: 'text', value: c, 'aria-label': 'Nom de la collaboration ' + (i + 1), oninput: e => { state.collabs[i] = e.target.value; changed(); } }),
+        iconBtn('up', 'Monter', () => mv(-1), i === 0), iconBtn('down', 'Descendre', () => mv(1), i === state.collabs.length - 1),
+        iconBtn('trash', 'Supprimer', () => { state.collabs.splice(i, 1); renderCollabs(); changed(); })
+      ]));
+    });
+  }
+  $('#addCollab').addEventListener('click', () => { state.collabs.push(''); renderCollabs(); changed(); const ins = $('#collabRows').querySelectorAll('input'); ins[ins.length - 1].focus(); });
+
+  // ---------- Contact ----------
+  function renderContact() {
+    document.querySelectorAll('[data-contact]').forEach(inp => {
+      inp.value = state.contact[inp.dataset.contact] || '';
+      inp.oninput = () => { state.contact[inp.dataset.contact] = inp.value.trim(); changed(); };
+    });
+  }
+
+  if (token) start().catch(() => logout());
+})();
+</script>
+</body>
+</html>

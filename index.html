@@ -246,11 +246,11 @@ footer small { font-size: 12px; letter-spacing: .08em; }
   <div class="wrap">
     <a class="logo" href="#accueil" aria-label="Capucine Caulliez Studio, accueil"><img src="images/logo-cc.png" alt="CC" width="226" height="290"></a>
     <nav aria-label="Navigation">
-      <a class="caps sm" href="#accueil"><span class="fr">Accueil</span><span class="en">Home</span></a>
-      <a class="caps sm" href="#portfolio"><span class="fr">Portfolio</span><span class="en">Portfolio</span></a>
-      <a class="caps sm" href="#livres"><span class="fr">Livres</span><span class="en">Books</span></a>
-      <a class="caps sm" href="#a-propos"><span class="fr">À propos</span><span class="en">About</span></a>
-      <a class="caps sm" href="#prestations"><span class="fr">Prestations</span><span class="en">Services</span></a>
+      <a class="caps sm" href="#accueil"><span class="fr" data-k="menu.01">Accueil</span><span class="en">Home</span></a>
+      <a class="caps sm" href="#portfolio"><span class="fr" data-k="menu.02">Portfolio</span><span class="en">Portfolio</span></a>
+      <a class="caps sm" href="#livres"><span class="fr" data-k="menu.03">Livres</span><span class="en">Books</span></a>
+      <a class="caps sm" href="#a-propos"><span class="fr" data-k="menu.04">À propos</span><span class="en">About</span></a>
+      <a class="caps sm" href="#prestations"><span class="fr" data-k="menu.05">Prestations</span><span class="en">Services</span></a>
       <a class="caps sm" href="#contact">Contact</a>
       <button class="lang caps sm" id="langBtn" type="button" aria-label="Changer de langue / Switch language"><b>FR</b> · EN</button>
     </nav>
@@ -260,46 +260,42 @@ footer small { font-size: 12px; letter-spacing: .08em; }
 <main>
   <section class="hero center" id="accueil">
     <div class="wrap">
-      <p class="caps tag"><span class="fr">Je raconte des histoires en images</span><span class="en">I tell stories through visuals</span></p>
+      <p class="caps tag"><span class="fr" data-k="accueil.01">Je raconte des histoires en images</span><span class="en">I tell stories through visuals</span></p>
       <div class="triptych">
-        <figure class="side l"><img src="images/img_4496-s.webp" alt="Ombres de palmier sur un mur de terre" width="900" height="1125"></figure>
-        <figure class="mid arch"><img src="images/img_4082.webp" alt="Enfilade d'arches à la lumière du soir"></figure>
-        <figure class="side r"><img src="images/img_3927-s.webp" alt="Lumière du soir sur un mur de pierre" width="900" height="1125"></figure>
+        <figure class="side l"><img data-img="accueil.gauche" src="images/img_4496-s.webp" alt="Ombres de palmier sur un mur de terre" width="900" height="1125"></figure>
+        <figure class="mid arch"><img data-img="accueil.milieu" src="images/img_4082.webp" alt="Enfilade d'arches à la lumière du soir"></figure>
+        <figure class="side r"><img data-img="accueil.droite" src="images/img_3927-s.webp" alt="Lumière du soir sur un mur de pierre" width="900" height="1125"></figure>
       </div>
       <h1><img class="wordmark" src="images/logo-full.png" alt="Capucine Caulliez Studio" width="873" height="474"></h1>
-      <p class="caps pillars">Luxury &nbsp;•&nbsp; Hospitality &nbsp;•&nbsp; Lifestyle</p>
-      <p class="caps sm sub"><span class="fr">Basée en Suisse &nbsp;·&nbsp; Projets en Suisse et à l'international</span><span class="en">Based in Switzerland &nbsp;·&nbsp; Projects in Switzerland and abroad</span></p>
+      <p class="caps pillars" data-t="accueil.piliers">Luxury &nbsp;•&nbsp; Hospitality &nbsp;•&nbsp; Lifestyle</p>
+      <p class="caps sm sub"><span class="fr" data-k="accueil.02">Basée en Suisse &nbsp;·&nbsp; Projets en Suisse et à l'international</span><span class="en">Based in Switzerland &nbsp;·&nbsp; Projects in Switzerland and abroad</span></p>
       <hr class="rule">
-      <a class="link-ital" href="#portfolio"><span class="fr">découvrir mon travail</span><span class="en">see my work</span> <span aria-hidden="true">→</span></a>
+      <a class="link-ital" href="#portfolio"><span class="fr" data-k="accueil.03">découvrir mon travail</span><span class="en">see my work</span> <span aria-hidden="true">→</span></a>
     </div>
   </section>
 
   <div class="collab">
     <div class="wrap">
-      <span class="caps sm label"><span class="fr">En collaboration avec</span><span class="en">In collaboration with</span></span>
-      <span class="name">One&amp;Only</span>
-      <span class="name">Le Petit Manoir</span>
-      <span class="name">Koshka Paris</span>
-      <span class="name">Nespresso</span>
-      <span class="name">KLAPP</span>
+      <span class="caps sm label"><span class="fr" data-k="collab.01">En collaboration avec</span><span class="en">In collaboration with</span></span>
+      <span id="collabNames"><span class="name">One&amp;Only</span><span class="name">Le Petit Manoir</span><span class="name">Koshka Paris</span><span class="name">Nespresso</span><span class="name">KLAPP</span></span>
     </div>
   </div>
 
   <section class="about" id="a-propos">
     <div class="wrap">
-      <figure class="arch" style="overflow:hidden"><img src="images/img7533.webp" alt="Portrait de Capucine Caulliez" loading="lazy"></figure>
+      <figure class="arch" style="overflow:hidden"><img data-img="apropos.portrait" src="images/img7533.webp" alt="Portrait de Capucine Caulliez" loading="lazy"></figure>
       <div class="txt">
-        <p class="caps sm" style="color:var(--taupe)"><span class="fr">À propos</span><span class="en">About</span></p>
-        <h2 style="text-align:left"><span class="fr">Bonjour, je suis Capucine</span><span class="en">Hello, I'm Capucine</span></h2>
-        <p><span class="fr">Photographe et créatrice de contenu visuel, je raconte en images l'univers des hôtels, des spas, des instituts de beauté, des restaurants et des marques lifestyle.</span><span class="en">As a photographer and visual content creator, I capture the world of hotels, spas, beauty institutes, restaurants and lifestyle brands through imagery.</span></p>
-        <p><span class="fr">Formée en photographie à Cambridge et en marketing et communication à Milan, j'associe sensibilité artistique et compréhension de l'identité des marques pour créer des images qui leur ressemblent. Basée en Suisse, je souhaite collaborer avec des établissements et des marques qui accordent une importance particulière à l'esthétique, à l'expérience et aux détails.</span><span class="en">Having studied photography in Cambridge and marketing and communication in Milan, I combine artistic sensitivity with an understanding of brand identity to create images that truly reflect each brand. Based in Switzerland, I am looking to collaborate with establishments and brands that place particular importance on aesthetics, experience and attention to detail.</span></p>
-        <p><span class="fr">Une lumière de fin de journée sur un mur de pierre, le reflet d'un marbre, une texture, un geste ou un détail soigneusement pensé : je cherche ce qui rend chaque lieu ou chaque marque unique, puis je le traduis en images. Mon approche associe photographie, esthétique et storytelling visuel, avec une attention particulière portée à la lumière, aux matières et aux ambiances.</span><span class="en">The late-afternoon light falling on a stone wall, the reflection on a marble surface, a texture, a gesture or a thoughtfully curated detail: I seek out what makes each place or brand unique and translate it into imagery. My approach brings together photography, aesthetics and visual storytelling, with a particular focus on light, materials and atmosphere.</span></p>
-        <p><span class="fr">J'accompagne les marques dans la création de contenus destinés à leurs sites internet, leurs réseaux sociaux et leurs campagnes, afin de valoriser leur identité et de créer une expérience visuelle cohérente.</span><span class="en">I work with brands to create visual content for their websites, social media platforms and campaigns, helping to showcase their identity and build a cohesive visual experience.</span></p>
+        <p class="caps sm" style="color:var(--taupe)"><span class="fr" data-k="apropos.01">À propos</span><span class="en">About</span></p>
+        <h2 style="text-align:left"><span class="fr" data-k="apropos.02">Bonjour, je suis Capucine</span><span class="en">Hello, I'm Capucine</span></h2>
+        <p><span class="fr" data-k="apropos.03">Photographe et créatrice de contenu visuel, je raconte en images l'univers des hôtels, des spas, des instituts de beauté, des restaurants et des marques lifestyle.</span><span class="en">As a photographer and visual content creator, I capture the world of hotels, spas, beauty institutes, restaurants and lifestyle brands through imagery.</span></p>
+        <p><span class="fr" data-k="apropos.04">Formée en photographie à Cambridge et en marketing et communication à Milan, j'associe sensibilité artistique et compréhension de l'identité des marques pour créer des images qui leur ressemblent. Basée en Suisse, je souhaite collaborer avec des établissements et des marques qui accordent une importance particulière à l'esthétique, à l'expérience et aux détails.</span><span class="en">Having studied photography in Cambridge and marketing and communication in Milan, I combine artistic sensitivity with an understanding of brand identity to create images that truly reflect each brand. Based in Switzerland, I am looking to collaborate with establishments and brands that place particular importance on aesthetics, experience and attention to detail.</span></p>
+        <p><span class="fr" data-k="apropos.05">Une lumière de fin de journée sur un mur de pierre, le reflet d'un marbre, une texture, un geste ou un détail soigneusement pensé : je cherche ce qui rend chaque lieu ou chaque marque unique, puis je le traduis en images. Mon approche associe photographie, esthétique et storytelling visuel, avec une attention particulière portée à la lumière, aux matières et aux ambiances.</span><span class="en">The late-afternoon light falling on a stone wall, the reflection on a marble surface, a texture, a gesture or a thoughtfully curated detail: I seek out what makes each place or brand unique and translate it into imagery. My approach brings together photography, aesthetics and visual storytelling, with a particular focus on light, materials and atmosphere.</span></p>
+        <p><span class="fr" data-k="apropos.06">J'accompagne les marques dans la création de contenus destinés à leurs sites internet, leurs réseaux sociaux et leurs campagnes, afin de valoriser leur identité et de créer une expérience visuelle cohérente.</span><span class="en">I work with brands to create visual content for their websites, social media platforms and campaigns, helping to showcase their identity and build a cohesive visual experience.</span></p>
         <div class="facts">
-          <div><p class="caps sm"><span class="fr">Mes Domaines d'Expertise</span><span class="en">My Areas of Expertise</span></p><p class="list"><span class="fr">Photographie &amp; Création de Contenu · Communication Digitale · Branding · Événementiel</span><span class="en">Photography &amp; Content Creation · Digital Communication · Branding · Events</span></p></div>
-          <div><p class="caps sm"><span class="fr">Mes Univers</span><span class="en">My Areas of Interest</span></p><p class="list"><span class="fr">Luxe · Hôtellerie · Wellness &amp; Beauté · Lifestyle · Gastronomie · Événementiel</span><span class="en">Luxury · Hospitality · Wellness &amp; Beauty · Lifestyle · Food &amp; Dining · Events</span></p></div>
+          <div><p class="caps sm"><span class="fr" data-k="apropos.07">Mes Domaines d'Expertise</span><span class="en">My Areas of Expertise</span></p><p class="list"><span class="fr" data-k="apropos.08">Photographie &amp; Création de Contenu · Communication Digitale · Branding · Événementiel</span><span class="en">Photography &amp; Content Creation · Digital Communication · Branding · Events</span></p></div>
+          <div><p class="caps sm"><span class="fr" data-k="apropos.09">Mes Univers</span><span class="en">My Areas of Interest</span></p><p class="list"><span class="fr" data-k="apropos.10">Luxe · Hôtellerie · Wellness &amp; Beauté · Lifestyle · Gastronomie · Événementiel</span><span class="en">Luxury · Hospitality · Wellness &amp; Beauty · Lifestyle · Food &amp; Dining · Events</span></p></div>
         </div>
-        <a class="link-ital" href="#contact"><span class="fr">Travailler Ensemble</span><span class="en">Let's Work Together</span> <span aria-hidden="true">→</span></a>
+        <a class="link-ital" href="#contact"><span class="fr" data-k="apropos.11">Travailler Ensemble</span><span class="en">Let's Work Together</span> <span aria-hidden="true">→</span></a>
       </div>
     </div>
   </section>
@@ -308,9 +304,9 @@ footer small { font-size: 12px; letter-spacing: .08em; }
     <div class="wrap">
       <div class="head">
         <p class="caps sm" style="color:var(--taupe)">Portfolio</p>
-        <h2><span class="fr">Séries choisies</span><span class="en">Selected series</span></h2>
+        <h2><span class="fr" data-k="portfolio.01">Séries choisies</span><span class="en">Selected series</span></h2>
         <hr class="rule">
-        <p class="lede"><span class="fr">Chaque série raconte un lieu. Choisissez-en une pour la parcourir, ou ouvrez une photo en grand.</span><span class="en">Each series tells the story of a place. Select one to explore, or click on a photograph to view it in full size.</span></p>
+        <p class="lede"><span class="fr" data-k="portfolio.02">Chaque série raconte un lieu. Choisissez-en une pour la parcourir, ou ouvrez une photo en grand.</span><span class="en">Each series tells the story of a place. Select one to explore, or click on a photograph to view it in full size.</span></p>
       </div>
 
       <div class="series" id="series"><button class="serie" type="button" data-f="city" aria-pressed="false"><span class="cover"><img src="images/img_5829-s.webp" alt="" loading="lazy"></span><span class="caps sm"><span class="fr">Lumière</span><span class="en">Light</span></span><span class="n">27 photos</span></button>
@@ -426,35 +422,35 @@ footer small { font-size: 12px; letter-spacing: .08em; }
   <section class="books" id="livres">
     <div class="wrap">
       <div class="head">
-        <p class="caps sm" style="color:var(--taupe)"><span class="fr">Publications</span><span class="en">Publications</span></p>
-        <h2><span class="fr">Livres photo</span><span class="en">Photo books</span></h2>
+        <p class="caps sm" style="color:var(--taupe)"><span class="fr" data-k="livres.01">Publications</span><span class="en">Publications</span></p>
+        <h2><span class="fr" data-k="livres.02">Livres photo</span><span class="en">Photo books</span></h2>
         <hr class="rule">
-        <p class="lede"><span class="fr">Deux livres photo conçus de la prise de vue à la mise en page. Cliquez sur une couverture pour le feuilleter.</span><span class="en">Two photo books, created from the initial photography to the final layout. Click on a cover to browse through the book.</span></p>
+        <p class="lede"><span class="fr" data-k="livres.03">Deux livres photo conçus de la prise de vue à la mise en page. Cliquez sur une couverture pour le feuilleter.</span><span class="en">Two photo books, created from the initial photography to the final layout. Click on a cover to browse through the book.</span></p>
       </div>
       <div class="book-list">
         <article class="book">
           <button class="cover" type="button" data-book="delight" aria-label="Feuilleter Delivering Delight"><img src="books/delight-cover.webp" alt="Couverture du livre Delivering Delight" loading="lazy"></button>
-          <h3>Delivering Delight</h3>
-          <p class="meta">Nespresso · <span class="fr">avril 2025</span><span class="en">April 2025</span></p>
-          <p class="desc"><span class="fr">Projet de fin d'études, Cambridge School of Art (BA Hons Photography). Une immersion dans les boutiques Nespresso : du grain à la tasse, la lumière, les matières et le plaisir de la dégustation.</span><span class="en">Major project, Cambridge School of Art (BA Hons Photography). An exploration of Nespresso boutiques, from bean to cup, capturing the light, textures and pleasure of the tasting experience.</span></p>
-          <div class="actions"><button type="button" data-book="delight"><span class="fr">Feuilleter</span><span class="en">Browse</span></button><a class="pdf" href="books/Delivering_Delight.pdf" target="_blank" rel="noopener">PDF</a></div>
+          <h3 data-t="livre1.titre">Delivering Delight</h3>
+          <p class="meta"><span data-t="livre1.lieux">Nespresso · </span><span class="fr" data-k="livres.04">avril 2025</span><span class="en">April 2025</span></p>
+          <p class="desc"><span class="fr" data-k="livres.05">Projet de fin d'études, Cambridge School of Art (BA Hons Photography). Une immersion dans les boutiques Nespresso : du grain à la tasse, la lumière, les matières et le plaisir de la dégustation.</span><span class="en">Major project, Cambridge School of Art (BA Hons Photography). An exploration of Nespresso boutiques, from bean to cup, capturing the light, textures and pleasure of the tasting experience.</span></p>
+          <div class="actions"><button type="button" data-book="delight"><span class="fr" data-k="livres.06">Feuilleter</span><span class="en">Browse</span></button><a class="pdf" href="books/Delivering_Delight.pdf" target="_blank" rel="noopener">PDF</a></div>
         </article>
         <article class="book">
           <button class="cover" type="button" data-book="reactions" aria-label="Feuilleter Reactions"><img src="books/reactions-cover.webp" alt="Couverture du livre Reactions" loading="lazy"></button>
-          <h3>Reactions</h3>
-          <p class="meta">One&amp;Only · Le Petit Manoir · <span class="fr">mai 2024</span><span class="en">May 2024</span></p>
-          <p class="desc"><span class="fr">Projet de fin d'études, Cambridge School of Art (BA Hons Photography). Un livre sur les émotions que provoquent les lieux : ombres, symétrie, formes, matières et détails, photographiés dans des hôtels et des espaces de bien-être.</span><span class="en">Major project, Cambridge School of Art (BA Hons Photography). A photography book exploring the emotions evoked by places through shadows, symmetry, shapes, textures and details, captured in hotels and wellness spaces.</span></p>
-          <div class="actions"><button type="button" data-book="reactions"><span class="fr">Feuilleter</span><span class="en">Browse</span></button><a class="pdf" href="books/Reactions.pdf" target="_blank" rel="noopener">PDF</a></div>
+          <h3 data-t="livre2.titre">Reactions</h3>
+          <p class="meta"><span data-t="livre2.lieux">One&amp;Only · Le Petit Manoir · </span><span class="fr" data-k="livres.07">mai 2024</span><span class="en">May 2024</span></p>
+          <p class="desc"><span class="fr" data-k="livres.08">Projet de fin d'études, Cambridge School of Art (BA Hons Photography). Un livre sur les émotions que provoquent les lieux : ombres, symétrie, formes, matières et détails, photographiés dans des hôtels et des espaces de bien-être.</span><span class="en">Major project, Cambridge School of Art (BA Hons Photography). A photography book exploring the emotions evoked by places through shadows, symmetry, shapes, textures and details, captured in hotels and wellness spaces.</span></p>
+          <div class="actions"><button type="button" data-book="reactions"><span class="fr" data-k="livres.09">Feuilleter</span><span class="en">Browse</span></button><a class="pdf" href="books/Reactions.pdf" target="_blank" rel="noopener">PDF</a></div>
         </article>
       </div>
     </div>
   </section>
 
   <section class="quote">
-    <img src="images/img_4496.webp" alt="" loading="lazy">
+    <img data-img="citation.fond" src="images/img_4496.webp" alt="" loading="lazy">
     <blockquote>
-      <p class="caps sm"><span class="fr">Balance</span><span class="en">Balance</span></p>
-      <p><span class="fr">Là où la structure rencontre la légèreté.</span><span class="en">Where structure meets lightness.</span></p>
+      <p class="caps sm"><span class="fr" data-k="citation.01">Balance</span><span class="en">Balance</span></p>
+      <p><span class="fr" data-k="citation.02">Là où la structure rencontre la légèreté.</span><span class="en">Where structure meets lightness.</span></p>
       <hr class="rule">
     </blockquote>
   </section>
@@ -462,15 +458,15 @@ footer small { font-size: 12px; letter-spacing: .08em; }
   <section class="services" id="prestations">
     <div class="wrap">
       <div class="head">
-        <p class="caps sm" style="color:var(--taupe)"><span class="fr">Prestations</span><span class="en">Services</span></p>
-        <h2><span class="fr">Ce que je crée pour vous</span><span class="en">What I create for you</span></h2>
+        <p class="caps sm" style="color:var(--taupe)"><span class="fr" data-k="prestations.01">Prestations</span><span class="en">Services</span></p>
+        <h2><span class="fr" data-k="prestations.02">Ce que je crée pour vous</span><span class="en">What I create for you</span></h2>
         <hr class="rule">
       </div>
       <div class="svc-list">
-        <article class="svc"><span class="no">i.</span><h3><span class="fr">Photographie &amp; shooting</span><span class="en">Photography &amp; Photoshoots</span></h3><p><span class="fr">Hôtels, spas, instituts de beauté, restaurants et lieux de vie : des images soignées qui révèlent l'identité et l'atmosphère de chaque établissement.</span><span class="en">Hotels, spas, beauty institutes, restaurants and lifestyle spaces: carefully crafted imagery that captures the identity and atmosphere of each establishment.</span></p></article>
-        <article class="svc"><span class="no">ii.</span><h3><span class="fr">Collaborations de marque</span><span class="en">Brand Collaborations</span></h3><p><span class="fr">Création de contenu en partenariat avec des marques, du concept à la réalisation, pour valoriser leur univers et renforcer leur visibilité.</span><span class="en">Content creation in partnership with brands, from concept to execution, showcasing their world and enhancing their visibility.</span></p></article>
-        <article class="svc"><span class="no">iii.</span><h3><span class="fr">Contenu pour les réseaux sociaux</span><span class="en">Social Media Content</span></h3><p><span class="fr">Photographies, carrousels et Reels conçus pour Instagram et les plateformes digitales, dans le respect de votre identité visuelle.</span><span class="en">Photography, carousels and Reels created for Instagram and digital platforms, while staying true to your visual identity.</span></p></article>
-        <article class="svc"><span class="no">iv.</span><h3><span class="fr">Événementiel &amp; expériences de marque</span><span class="en">Events &amp; Brand Experiences</span></h3><p><span class="fr">Photographie d'événements, lancements de produits et expériences de marque, en capturant les moments et les détails qui les rendent uniques.</span><span class="en">Photography for events, product launches and brand experiences, capturing the moments and details that make each one unique.</span></p></article>
+        <article class="svc"><span class="no">i.</span><h3><span class="fr" data-k="prestations.03">Photographie &amp; shooting</span><span class="en">Photography &amp; Photoshoots</span></h3><p><span class="fr" data-k="prestations.04">Hôtels, spas, instituts de beauté, restaurants et lieux de vie : des images soignées qui révèlent l'identité et l'atmosphère de chaque établissement.</span><span class="en">Hotels, spas, beauty institutes, restaurants and lifestyle spaces: carefully crafted imagery that captures the identity and atmosphere of each establishment.</span></p></article>
+        <article class="svc"><span class="no">ii.</span><h3><span class="fr" data-k="prestations.05">Collaborations de marque</span><span class="en">Brand Collaborations</span></h3><p><span class="fr" data-k="prestations.06">Création de contenu en partenariat avec des marques, du concept à la réalisation, pour valoriser leur univers et renforcer leur visibilité.</span><span class="en">Content creation in partnership with brands, from concept to execution, showcasing their world and enhancing their visibility.</span></p></article>
+        <article class="svc"><span class="no">iii.</span><h3><span class="fr" data-k="prestations.07">Contenu pour les réseaux sociaux</span><span class="en">Social Media Content</span></h3><p><span class="fr" data-k="prestations.08">Photographies, carrousels et Reels conçus pour Instagram et les plateformes digitales, dans le respect de votre identité visuelle.</span><span class="en">Photography, carousels and Reels created for Instagram and digital platforms, while staying true to your visual identity.</span></p></article>
+        <article class="svc"><span class="no">iv.</span><h3><span class="fr" data-k="prestations.09">Événementiel &amp; expériences de marque</span><span class="en">Events &amp; Brand Experiences</span></h3><p><span class="fr" data-k="prestations.10">Photographie d'événements, lancements de produits et expériences de marque, en capturant les moments et les détails qui les rendent uniques.</span><span class="en">Photography for events, product launches and brand experiences, capturing the moments and details that make each one unique.</span></p></article>
       </div>
     </div>
   </section>
@@ -478,15 +474,15 @@ footer small { font-size: 12px; letter-spacing: .08em; }
   <section id="methode">
     <div class="wrap">
       <div class="head">
-        <p class="caps sm" style="color:var(--taupe)"><span class="fr">Méthode</span><span class="en">Process</span></p>
-        <h2><span class="fr">Un shooting en quatre temps</span><span class="en">A shoot in four steps</span></h2>
+        <p class="caps sm" style="color:var(--taupe)"><span class="fr" data-k="methode.01">Méthode</span><span class="en">Process</span></p>
+        <h2><span class="fr" data-k="methode.02">Un shooting en quatre temps</span><span class="en">A shoot in four steps</span></h2>
         <hr class="rule">
       </div>
       <div class="steps">
-        <div class="step"><span class="n">01</span><p class="caps sm"><span class="fr">Échange</span><span class="en">Discovery</span></p><p><span class="fr">Vos objectifs, votre lieu, vos dates.</span><span class="en">Your objectives, your location and your preferred dates.</span></p></div>
-        <div class="step"><span class="n">02</span><p class="caps sm">Concept</p><p><span class="fr">Moodboard, liste de plans, meilleures heures de lumière.</span><span class="en">Moodboard, shot list and the best times to capture natural light.</span></p></div>
-        <div class="step"><span class="n">03</span><p class="caps sm"><span class="fr">Shooting</span><span class="en">Photoshoot</span></p><p><span class="fr">Une journée préparée, discrète pour vos clients.</span><span class="en">A carefully planned and discreet shoot, ensuring minimal disruption to your guests.</span></p></div>
-        <div class="step"><span class="n">04</span><p class="caps sm"><span class="fr">Livraison</span><span class="en">Delivery</span></p><p><span class="fr">Images retouchées, prêtes pour le web et les réseaux.</span><span class="en">Professionally retouched images, ready for your website and social media.</span></p></div>
+        <div class="step"><span class="n">01</span><p class="caps sm"><span class="fr" data-k="methode.03">Échange</span><span class="en">Discovery</span></p><p><span class="fr" data-k="methode.04">Vos objectifs, votre lieu, vos dates.</span><span class="en">Your objectives, your location and your preferred dates.</span></p></div>
+        <div class="step"><span class="n">02</span><p class="caps sm">Concept</p><p><span class="fr" data-k="methode.05">Moodboard, liste de plans, meilleures heures de lumière.</span><span class="en">Moodboard, shot list and the best times to capture natural light.</span></p></div>
+        <div class="step"><span class="n">03</span><p class="caps sm"><span class="fr" data-k="methode.06">Shooting</span><span class="en">Photoshoot</span></p><p><span class="fr" data-k="methode.07">Une journée préparée, discrète pour vos clients.</span><span class="en">A carefully planned and discreet shoot, ensuring minimal disruption to your guests.</span></p></div>
+        <div class="step"><span class="n">04</span><p class="caps sm"><span class="fr" data-k="methode.08">Livraison</span><span class="en">Delivery</span></p><p><span class="fr" data-k="methode.09">Images retouchées, prêtes pour le web et les réseaux.</span><span class="en">Professionally retouched images, ready for your website and social media.</span></p></div>
       </div>
     </div>
   </section>
@@ -495,35 +491,35 @@ footer small { font-size: 12px; letter-spacing: .08em; }
     <div class="wrap">
       <div class="side">
         <p class="caps sm" style="color:var(--taupe)">Contact</p>
-        <h2><span class="fr">Parlons de votre prochain shooting</span><span class="en">Let's talk about your next shoot</span></h2>
+        <h2><span class="fr" data-k="contact.01">Parlons de votre prochain shooting</span><span class="en">Let's talk about your next shoot</span></h2>
         <hr class="rule">
-        <p><span class="fr">Hôtel, spa, institut de beauté, restaurant ou marque : décrivez votre projet en quelques lignes, je vous réponds sous 24 à 48 h.</span><span class="en">Whether you're a hotel, spa, beauty institute, restaurant or brand, tell me a little about your project and I'll get back to you within 24 to 48 hours.</span></p>
+        <p><span class="fr" data-k="contact.02">Hôtel, spa, institut de beauté, restaurant ou marque : décrivez votre projet en quelques lignes, je vous réponds sous 24 à 48 h.</span><span class="en">Whether you're a hotel, spa, beauty institute, restaurant or brand, tell me a little about your project and I'll get back to you within 24 to 48 hours.</span></p>
         <div class="direct">
-          <div><span class="caps sm">E-mail</span><a href="mailto:capucinecaulliez04@gmail.com">capucinecaulliez04@gmail.com</a></div>
-          <div><span class="caps sm"><span class="fr">Téléphone</span><span class="en">Phone</span></span><a href="tel:+41783520618">+41 78 352 06 18</a></div>
-          <div><span class="caps sm">Instagram</span><a href="https://www.instagram.com/capucinecaulliez.studio/" target="_blank" rel="noopener">@capucinecaulliez.studio</a></div>
-          <div><span class="caps sm"><span class="fr">Zone</span><span class="en">Location</span></span><span class="zone"><span class="fr">Suisse &amp; déplacements</span><span class="en">Switzerland &amp; available for travel</span></span></div>
+          <div><span class="caps sm">E-mail</span><a data-c="email" href="mailto:capucinecaulliez04@gmail.com">capucinecaulliez04@gmail.com</a></div>
+          <div><span class="caps sm"><span class="fr" data-k="contact.03">Téléphone</span><span class="en">Phone</span></span><a data-c="telephone" href="tel:+41783520618">+41 78 352 06 18</a></div>
+          <div><span class="caps sm">Instagram</span><a data-c="instagram" href="https://www.instagram.com/capucinecaulliez.studio/" target="_blank" rel="noopener">@capucinecaulliez.studio</a></div>
+          <div><span class="caps sm"><span class="fr" data-k="contact.04">Zone</span><span class="en">Location</span></span><span class="zone"><span class="fr" data-k="contact.05">Suisse &amp; déplacements</span><span class="en">Switzerland &amp; available for travel</span></span></div>
         
-          <div><span class="caps sm"><span class="fr">Délai de réponse</span><span class="en">Response time</span></span><span class="zone"><span class="fr">Sous 24 à 48 h</span><span class="en">Within 24 to 48 hours</span></span></div></div>
+          <div><span class="caps sm"><span class="fr" data-k="contact.06">Délai de réponse</span><span class="en">Response time</span></span><span class="zone"><span class="fr" data-k="contact.07">Sous 24 à 48 h</span><span class="en">Within 24 to 48 hours</span></span></div></div>
       </div>
       <form id="form">
-        <div><label class="caps sm" for="f-nom"><span class="fr">Nom</span><span class="en">Name</span></label><input id="f-nom" name="nom" type="text" required autocomplete="name"></div>
-        <div><label class="caps sm" for="f-lieu"><span class="fr">Établissement / marque</span><span class="en">Venue / brand</span></label><input id="f-lieu" name="lieu" type="text"></div>
+        <div><label class="caps sm" for="f-nom"><span class="fr" data-k="formulaire.01">Nom</span><span class="en">Name</span></label><input id="f-nom" name="nom" type="text" required autocomplete="name"></div>
+        <div><label class="caps sm" for="f-lieu"><span class="fr" data-k="formulaire.02">Établissement / marque</span><span class="en">Venue / brand</span></label><input id="f-lieu" name="lieu" type="text"></div>
         <div><label class="caps sm" for="f-mail">E-mail</label><input id="f-mail" name="mail" type="email" required autocomplete="email"></div>
-        <div><label class="caps sm" for="f-date"><span class="fr">Période souhaitée</span><span class="en">Preferred dates</span></label><input id="f-date" name="date" type="text"></div>
+        <div><label class="caps sm" for="f-date"><span class="fr" data-k="formulaire.03">Période souhaitée</span><span class="en">Preferred dates</span></label><input id="f-date" name="date" type="text"></div>
         <fieldset class="full">
-          <legend class="caps sm"><span class="fr">Type de projet</span><span class="en">Project type</span></legend>
+          <legend class="caps sm"><span class="fr" data-k="formulaire.04">Type de projet</span><span class="en">Project type</span></legend>
           <div class="chips">
-            <label><input type="checkbox" name="type" value="Photographie &amp; shooting"><span><span class="fr">Photographie &amp; shooting</span><span class="en">Photography &amp; Photoshoots</span></span></label>
-            <label><input type="checkbox" name="type" value="Collaboration"><span><span class="fr">Collaboration</span><span class="en">Brand Collaborations</span></span></label>
-            <label><input type="checkbox" name="type" value="Réseaux sociaux"><span><span class="fr">Réseaux sociaux</span><span class="en">Social Media Content</span></span></label>
-            <label><input type="checkbox" name="type" value="Événementiel"><span><span class="fr">Événementiel</span><span class="en">Events</span></span></label>
+            <label><input type="checkbox" name="type" value="Photographie &amp; shooting"><span><span class="fr" data-k="formulaire.05">Photographie &amp; shooting</span><span class="en">Photography &amp; Photoshoots</span></span></label>
+            <label><input type="checkbox" name="type" value="Collaboration"><span><span class="fr" data-k="formulaire.06">Collaboration</span><span class="en">Brand Collaborations</span></span></label>
+            <label><input type="checkbox" name="type" value="Réseaux sociaux"><span><span class="fr" data-k="formulaire.07">Réseaux sociaux</span><span class="en">Social Media Content</span></span></label>
+            <label><input type="checkbox" name="type" value="Événementiel"><span><span class="fr" data-k="formulaire.08">Événementiel</span><span class="en">Events</span></span></label>
           </div>
         </fieldset>
-        <div class="full"><label class="caps sm" for="f-msg"><span class="fr">Votre projet</span><span class="en">Your project</span></label><textarea id="f-msg" name="msg"></textarea></div>
+        <div class="full"><label class="caps sm" for="f-msg"><span class="fr" data-k="formulaire.09">Votre projet</span><span class="en">Your project</span></label><textarea id="f-msg" name="msg"></textarea></div>
         <div class="full" style="display:flex;gap:20px;align-items:center;flex-wrap:wrap">
-          <button class="send caps sm" type="submit"><span class="fr">Envoyer la demande</span><span class="en">Send request</span></button>
-          <span class="formnote"><span class="fr">Votre messagerie s'ouvre avec la demande pré-remplie.</span><span class="en">Your email app will open with your enquiry pre-filled.</span></span>
+          <button class="send caps sm" type="submit"><span class="fr" data-k="formulaire.10">Envoyer la demande</span><span class="en">Send request</span></button>
+          <span class="formnote"><span class="fr" data-k="formulaire.11">Votre messagerie s'ouvre avec la demande pré-remplie.</span><span class="en">Your email app will open with your enquiry pre-filled.</span></span>
         </div>
       </form>
     </div>
@@ -535,16 +531,16 @@ footer small { font-size: 12px; letter-spacing: .08em; }
     <img src="images/logo-full-light.png" alt="Capucine Caulliez Studio" width="873" height="474" loading="lazy">
     <nav>
       <a class="caps sm" href="#portfolio">Portfolio</a>
-      <a class="caps sm" href="#a-propos"><span class="fr">À propos</span><span class="en">About</span></a>
+      <a class="caps sm" href="#a-propos"><span class="fr" data-k="footer.01">À propos</span><span class="en">About</span></a>
       <a class="caps sm" href="#contact">Contact</a>
-      <a class="caps sm" href="https://www.instagram.com/capucinecaulliez.studio/" target="_blank" rel="noopener">Instagram</a>
+      <a class="caps sm" data-c="instagram-footer" href="https://www.instagram.com/capucinecaulliez.studio/" target="_blank" rel="noopener">Instagram</a>
     </nav>
-    <small>© 2026 Capucine Caulliez Studio · <span class="fr">Suisse</span><span class="en">Switzerland</span></small>
+    <small>© 2026 Capucine Caulliez Studio · <span class="fr" data-k="footer.02">Suisse</span><span class="en">Switzerland</span></small>
   </div>
 </footer>
 
 <div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Visionneuse">
-  <button class="close caps sm" type="button"><span class="fr">Fermer</span><span class="en">Close</span> ✕</button>
+  <button class="close caps sm" type="button"><span class="fr" data-k="visionneuse.01">Fermer</span><span class="en">Close</span> ✕</button>
   <button class="prev" type="button" aria-label="Photo précédente">←</button>
   <img alt="">
   <button class="next" type="button" aria-label="Photo suivante">→</button>
@@ -552,7 +548,7 @@ footer small { font-size: 12px; letter-spacing: .08em; }
 </div>
 
 <div class="reader" id="reader" role="dialog" aria-modal="true" aria-label="Livre">
-  <button class="close caps sm" type="button"><span class="fr">Fermer</span><span class="en">Close</span> ✕</button>
+  <button class="close caps sm" type="button"><span class="fr" data-k="liseuse.01">Fermer</span><span class="en">Close</span> ✕</button>
   <button class="prev" type="button" aria-label="Page précédente">←</button>
   <img alt="">
   <button class="next" type="button" aria-label="Page suivante">→</button>
@@ -560,6 +556,43 @@ footer small { font-size: 12px; letter-spacing: .08em; }
 </div>
 
 <script>
+  // Contenu du site : lu depuis content.json (modifié par le dashboard /admin)
+  function esc(s) { return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
+  function applyContent(c) {
+    document.querySelectorAll('[data-k]').forEach(el => {
+      const v = c.texts && c.texts[el.dataset.k]; if (!v) return;
+      el.innerHTML = v.fr; const en = el.nextElementSibling; if (en && en.classList.contains('en')) en.innerHTML = v.en;
+    });
+    document.querySelectorAll('[data-t]').forEach(el => { const v = c.plain && c.plain[el.dataset.t]; if (v != null) el.innerHTML = v; });
+    document.querySelectorAll('[data-img]').forEach(el => { const v = c.images && c.images[el.dataset.img]; if (v) el.src = v; });
+    const ct = c.contact || {};
+    const set = (sel, href, text) => document.querySelectorAll(sel).forEach(a => { a.href = href; if (text != null) a.textContent = text; });
+    if (ct.email) set('[data-c="email"]', 'mailto:' + ct.email, ct.email);
+    if (ct.telephone) set('[data-c="telephone"]', 'tel:' + ct.telephone.replace(/[^+\d]/g, ''), ct.telephone);
+    if (ct.instagram) { const u = 'https://www.instagram.com/' + ct.instagram.replace(/^@/, '') + '/'; set('[data-c="instagram"]', u, '@' + ct.instagram.replace(/^@/, '')); set('[data-c="instagram-footer"]', u, null); }
+    if (ct.email) window.CONTACT_EMAIL = ct.email;
+    if (c.collabs) document.getElementById('collabNames').innerHTML = c.collabs.map(n => '<span class="name">' + esc(n) + '</span>').join('');
+    if (c.series && c.photos) {
+      const count = id => c.photos.filter(p => p.s === id).length;
+      document.getElementById('series').innerHTML = c.series.map(s =>
+        '<button class="serie" type="button" data-f="' + esc(s.id) + '" aria-pressed="false"><span class="cover"><img src="' + esc(s.cover) + '" alt="" loading="lazy"></span>' +
+        '<span class="caps sm"><span class="fr">' + s.fr + '</span><span class="en">' + s.en + '</span></span><span class="n">' + count(s.id) + ' photos</span></button>').join('');
+      document.querySelector('.gallery-bar').innerHTML = '<button class="caps sm" type="button" data-f="all" aria-pressed="true"><span class="fr">Tout</span><span class="en">All</span></button>' +
+        c.series.map(s => '<button class="caps sm" type="button" data-f="' + esc(s.id) + '" aria-pressed="false"><span class="fr">' + s.fr + '</span><span class="en">' + s.en + '</span></button>').join('');
+      const name = id => { const s = c.series.find(x => x.id === id); return s ? s.fr : ''; };
+      // ordre « Tout » : on alterne les séries pour mélanger les ambiances
+      const groups = c.series.map(s => c.photos.filter(p => p.s === s.id));
+      const mixed = []; for (let i = 0; groups.some(g => i < g.length); i++) groups.forEach(g => { if (g[i]) mixed.push(g[i]); });
+      document.getElementById('grid').innerHTML = mixed.map(p =>
+        '<figure class="shot" data-s="' + esc(p.s) + '" data-cap="' + esc(name(p.s)) + '" data-full="' + esc(p.full) + '"><img src="' + esc(p.src) + '" alt="' + esc(name(p.s)) + '" width="' + (p.w || 900) + '" height="' + (p.h || 1125) + '" loading="lazy"></figure>').join('');
+    }
+  }
+  fetch('content.json', { cache: 'no-cache' }).then(r => r.ok ? r.json() : null).catch(() => null).then(c => {
+    if (c) { try { applyContent(c); } catch (e) { console.error(e); } }
+    initSite();
+  });
+
+  function initSite() {
   const topBar = document.getElementById('top');
   const onScroll = () => topBar.classList.toggle('line', window.scrollY > 30);
   addEventListener('scroll', onScroll, { passive: true }); onScroll();
@@ -666,8 +699,9 @@ footer small { font-size: 12px; letter-spacing: .08em; }
     const f = e.target;
     const types = [...f.querySelectorAll('input[name=type]:checked')].map(x => x.value).join(', ');
     const body = ['Nom : ' + f.nom.value, 'Établissement / marque : ' + f.lieu.value, 'E-mail : ' + f.mail.value, 'Période : ' + f.date.value, 'Type de projet : ' + types, '', f.msg.value].join('\n');
-    location.href = 'mailto:capucinecaulliez04@gmail.com?subject=' + encodeURIComponent('Demande de shooting — ' + (f.lieu.value || f.nom.value)) + '&body=' + encodeURIComponent(body);
+    location.href = 'mailto:' + (window.CONTACT_EMAIL || 'capucinecaulliez04@gmail.com') + '?subject=' + encodeURIComponent('Demande de shooting — ' + (f.lieu.value || f.nom.value)) + '&body=' + encodeURIComponent(body);
   });
+  }
 </script>
 </body>
 </html>

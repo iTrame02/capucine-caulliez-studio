@@ -1,0 +1,1138 @@
+{
+ "version": 1,
+ "sections": [
+  {
+   "id": "accueil",
+   "label": "Accueil"
+  },
+  {
+   "id": "collab",
+   "label": "Bandeau collaborations"
+  },
+  {
+   "id": "apropos",
+   "label": "À propos"
+  },
+  {
+   "id": "portfolio",
+   "label": "Portfolio"
+  },
+  {
+   "id": "livres",
+   "label": "Livres photo"
+  },
+  {
+   "id": "citation",
+   "label": "Citation"
+  },
+  {
+   "id": "prestations",
+   "label": "Prestations"
+  },
+  {
+   "id": "methode",
+   "label": "Méthode"
+  },
+  {
+   "id": "contact",
+   "label": "Contact"
+  },
+  {
+   "id": "formulaire",
+   "label": "Formulaire de contact"
+  },
+  {
+   "id": "footer",
+   "label": "Pied de page"
+  },
+  {
+   "id": "menu",
+   "label": "Menu"
+  },
+  {
+   "id": "visionneuse",
+   "label": "Visionneuse photo"
+  },
+  {
+   "id": "liseuse",
+   "label": "Liseuse des livres"
+  }
+ ],
+ "texts": {
+  "menu.01": {
+   "fr": "Accueil",
+   "en": "Home"
+  },
+  "menu.02": {
+   "fr": "Portfolio",
+   "en": "Portfolio"
+  },
+  "menu.03": {
+   "fr": "Livres",
+   "en": "Books"
+  },
+  "menu.04": {
+   "fr": "À propos",
+   "en": "About"
+  },
+  "menu.05": {
+   "fr": "Prestations",
+   "en": "Services"
+  },
+  "accueil.01": {
+   "fr": "Je raconte des histoires en images",
+   "en": "I tell stories through visuals"
+  },
+  "accueil.02": {
+   "fr": "Basée en Suisse &nbsp;·&nbsp; Projets en Suisse et à l'international",
+   "en": "Based in Switzerland &nbsp;·&nbsp; Projects in Switzerland and abroad"
+  },
+  "accueil.03": {
+   "fr": "découvrir mon travail",
+   "en": "see my work"
+  },
+  "collab.01": {
+   "fr": "En collaboration avec",
+   "en": "In collaboration with"
+  },
+  "apropos.01": {
+   "fr": "À propos",
+   "en": "About"
+  },
+  "apropos.02": {
+   "fr": "Bonjour, je suis Capucine",
+   "en": "Hello, I'm Capucine"
+  },
+  "apropos.03": {
+   "fr": "Photographe et créatrice de contenu visuel, je raconte en images l'univers des hôtels, des spas, des instituts de beauté, des restaurants et des marques lifestyle.",
+   "en": "As a photographer and visual content creator, I capture the world of hotels, spas, beauty institutes, restaurants and lifestyle brands through imagery."
+  },
+  "apropos.04": {
+   "fr": "Formée en photographie à Cambridge et en marketing et communication à Milan, j'associe sensibilité artistique et compréhension de l'identité des marques pour créer des images qui leur ressemblent. Basée en Suisse, je souhaite collaborer avec des établissements et des marques qui accordent une importance particulière à l'esthétique, à l'expérience et aux détails.",
+   "en": "Having studied photography in Cambridge and marketing and communication in Milan, I combine artistic sensitivity with an understanding of brand identity to create images that truly reflect each brand. Based in Switzerland, I am looking to collaborate with establishments and brands that place particular importance on aesthetics, experience and attention to detail."
+  },
+  "apropos.05": {
+   "fr": "Une lumière de fin de journée sur un mur de pierre, le reflet d'un marbre, une texture, un geste ou un détail soigneusement pensé : je cherche ce qui rend chaque lieu ou chaque marque unique, puis je le traduis en images. Mon approche associe photographie, esthétique et storytelling visuel, avec une attention particulière portée à la lumière, aux matières et aux ambiances.",
+   "en": "The late-afternoon light falling on a stone wall, the reflection on a marble surface, a texture, a gesture or a thoughtfully curated detail: I seek out what makes each place or brand unique and translate it into imagery. My approach brings together photography, aesthetics and visual storytelling, with a particular focus on light, materials and atmosphere."
+  },
+  "apropos.06": {
+   "fr": "J'accompagne les marques dans la création de contenus destinés à leurs sites internet, leurs réseaux sociaux et leurs campagnes, afin de valoriser leur identité et de créer une expérience visuelle cohérente.",
+   "en": "I work with brands to create visual content for their websites, social media platforms and campaigns, helping to showcase their identity and build a cohesive visual experience."
+  },
+  "apropos.07": {
+   "fr": "Mes Domaines d'Expertise",
+   "en": "My Areas of Expertise"
+  },
+  "apropos.08": {
+   "fr": "Photographie &amp; Création de Contenu · Communication Digitale · Branding · Événementiel",
+   "en": "Photography &amp; Content Creation · Digital Communication · Branding · Events"
+  },
+  "apropos.09": {
+   "fr": "Mes Univers",
+   "en": "My Areas of Interest"
+  },
+  "apropos.10": {
+   "fr": "Luxe · Hôtellerie · Wellness &amp; Beauté · Lifestyle · Gastronomie · Événementiel",
+   "en": "Luxury · Hospitality · Wellness &amp; Beauty · Lifestyle · Food &amp; Dining · Events"
+  },
+  "apropos.11": {
+   "fr": "Travailler Ensemble",
+   "en": "Let's Work Together"
+  },
+  "portfolio.01": {
+   "fr": "Séries choisies",
+   "en": "Selected series"
+  },
+  "portfolio.02": {
+   "fr": "Chaque série raconte un lieu. Choisissez-en une pour la parcourir, ou ouvrez une photo en grand.",
+   "en": "Each series tells the story of a place. Select one to explore, or click on a photograph to view it in full size."
+  },
+  "livres.01": {
+   "fr": "Publications",
+   "en": "Publications"
+  },
+  "livres.02": {
+   "fr": "Livres photo",
+   "en": "Photo books"
+  },
+  "livres.03": {
+   "fr": "Deux livres photo conçus de la prise de vue à la mise en page. Cliquez sur une couverture pour le feuilleter.",
+   "en": "Two photo books, created from the initial photography to the final layout. Click on a cover to browse through the book."
+  },
+  "livres.04": {
+   "fr": "avril 2025",
+   "en": "April 2025"
+  },
+  "livres.05": {
+   "fr": "Projet de fin d'études, Cambridge School of Art (BA Hons Photography). Une immersion dans les boutiques Nespresso : du grain à la tasse, la lumière, les matières et le plaisir de la dégustation.",
+   "en": "Major project, Cambridge School of Art (BA Hons Photography). An exploration of Nespresso boutiques, from bean to cup, capturing the light, textures and pleasure of the tasting experience."
+  },
+  "livres.06": {
+   "fr": "Feuilleter",
+   "en": "Browse"
+  },
+  "livres.07": {
+   "fr": "mai 2024",
+   "en": "May 2024"
+  },
+  "livres.08": {
+   "fr": "Projet de fin d'études, Cambridge School of Art (BA Hons Photography). Un livre sur les émotions que provoquent les lieux : ombres, symétrie, formes, matières et détails, photographiés dans des hôtels et des espaces de bien-être.",
+   "en": "Major project, Cambridge School of Art (BA Hons Photography). A photography book exploring the emotions evoked by places through shadows, symmetry, shapes, textures and details, captured in hotels and wellness spaces."
+  },
+  "livres.09": {
+   "fr": "Feuilleter",
+   "en": "Browse"
+  },
+  "citation.01": {
+   "fr": "Balance",
+   "en": "Balance"
+  },
+  "citation.02": {
+   "fr": "Là où la structure rencontre la légèreté.",
+   "en": "Where structure meets lightness."
+  },
+  "prestations.01": {
+   "fr": "Prestations",
+   "en": "Services"
+  },
+  "prestations.02": {
+   "fr": "Ce que je crée pour vous",
+   "en": "What I create for you"
+  },
+  "prestations.03": {
+   "fr": "Photographie &amp; shooting",
+   "en": "Photography &amp; Photoshoots"
+  },
+  "prestations.04": {
+   "fr": "Hôtels, spas, instituts de beauté, restaurants et lieux de vie : des images soignées qui révèlent l'identité et l'atmosphère de chaque établissement.",
+   "en": "Hotels, spas, beauty institutes, restaurants and lifestyle spaces: carefully crafted imagery that captures the identity and atmosphere of each establishment."
+  },
+  "prestations.05": {
+   "fr": "Collaborations de marque",
+   "en": "Brand Collaborations"
+  },
+  "prestations.06": {
+   "fr": "Création de contenu en partenariat avec des marques, du concept à la réalisation, pour valoriser leur univers et renforcer leur visibilité.",
+   "en": "Content creation in partnership with brands, from concept to execution, showcasing their world and enhancing their visibility."
+  },
+  "prestations.07": {
+   "fr": "Contenu pour les réseaux sociaux",
+   "en": "Social Media Content"
+  },
+  "prestations.08": {
+   "fr": "Photographies, carrousels et Reels conçus pour Instagram et les plateformes digitales, dans le respect de votre identité visuelle.",
+   "en": "Photography, carousels and Reels created for Instagram and digital platforms, while staying true to your visual identity."
+  },
+  "prestations.09": {
+   "fr": "Événementiel &amp; expériences de marque",
+   "en": "Events &amp; Brand Experiences"
+  },
+  "prestations.10": {
+   "fr": "Photographie d'événements, lancements de produits et expériences de marque, en capturant les moments et les détails qui les rendent uniques.",
+   "en": "Photography for events, product launches and brand experiences, capturing the moments and details that make each one unique."
+  },
+  "methode.01": {
+   "fr": "Méthode",
+   "en": "Process"
+  },
+  "methode.02": {
+   "fr": "Un shooting en quatre temps",
+   "en": "A shoot in four steps"
+  },
+  "methode.03": {
+   "fr": "Échange",
+   "en": "Discovery"
+  },
+  "methode.04": {
+   "fr": "Vos objectifs, votre lieu, vos dates.",
+   "en": "Your objectives, your location and your preferred dates."
+  },
+  "methode.05": {
+   "fr": "Moodboard, liste de plans, meilleures heures de lumière.",
+   "en": "Moodboard, shot list and the best times to capture natural light."
+  },
+  "methode.06": {
+   "fr": "Shooting",
+   "en": "Photoshoot"
+  },
+  "methode.07": {
+   "fr": "Une journée préparée, discrète pour vos clients.",
+   "en": "A carefully planned and discreet shoot, ensuring minimal disruption to your guests."
+  },
+  "methode.08": {
+   "fr": "Livraison",
+   "en": "Delivery"
+  },
+  "methode.09": {
+   "fr": "Images retouchées, prêtes pour le web et les réseaux.",
+   "en": "Professionally retouched images, ready for your website and social media."
+  },
+  "contact.01": {
+   "fr": "Parlons de votre prochain shooting",
+   "en": "Let's talk about your next shoot"
+  },
+  "contact.02": {
+   "fr": "Hôtel, spa, institut de beauté, restaurant ou marque : décrivez votre projet en quelques lignes, je vous réponds sous 24 à 48 h.",
+   "en": "Whether you're a hotel, spa, beauty institute, restaurant or brand, tell me a little about your project and I'll get back to you within 24 to 48 hours."
+  },
+  "contact.03": {
+   "fr": "Téléphone",
+   "en": "Phone"
+  },
+  "contact.04": {
+   "fr": "Zone",
+   "en": "Location"
+  },
+  "contact.05": {
+   "fr": "Suisse &amp; déplacements",
+   "en": "Switzerland &amp; available for travel"
+  },
+  "contact.06": {
+   "fr": "Délai de réponse",
+   "en": "Response time"
+  },
+  "contact.07": {
+   "fr": "Sous 24 à 48 h",
+   "en": "Within 24 to 48 hours"
+  },
+  "formulaire.01": {
+   "fr": "Nom",
+   "en": "Name"
+  },
+  "formulaire.02": {
+   "fr": "Établissement / marque",
+   "en": "Venue / brand"
+  },
+  "formulaire.03": {
+   "fr": "Période souhaitée",
+   "en": "Preferred dates"
+  },
+  "formulaire.04": {
+   "fr": "Type de projet",
+   "en": "Project type"
+  },
+  "formulaire.05": {
+   "fr": "Photographie &amp; shooting",
+   "en": "Photography &amp; Photoshoots"
+  },
+  "formulaire.06": {
+   "fr": "Collaboration",
+   "en": "Brand Collaborations"
+  },
+  "formulaire.07": {
+   "fr": "Réseaux sociaux",
+   "en": "Social Media Content"
+  },
+  "formulaire.08": {
+   "fr": "Événementiel",
+   "en": "Events"
+  },
+  "formulaire.09": {
+   "fr": "Votre projet",
+   "en": "Your project"
+  },
+  "formulaire.10": {
+   "fr": "Envoyer la demande",
+   "en": "Send request"
+  },
+  "formulaire.11": {
+   "fr": "Votre messagerie s'ouvre avec la demande pré-remplie.",
+   "en": "Your email app will open with your enquiry pre-filled."
+  },
+  "footer.01": {
+   "fr": "À propos",
+   "en": "About"
+  },
+  "footer.02": {
+   "fr": "Suisse",
+   "en": "Switzerland"
+  },
+  "visionneuse.01": {
+   "fr": "Fermer",
+   "en": "Close"
+  },
+  "liseuse.01": {
+   "fr": "Fermer",
+   "en": "Close"
+  }
+ },
+ "textOrder": [
+  "menu.01",
+  "menu.02",
+  "menu.03",
+  "menu.04",
+  "menu.05",
+  "accueil.01",
+  "accueil.02",
+  "accueil.03",
+  "collab.01",
+  "apropos.01",
+  "apropos.02",
+  "apropos.03",
+  "apropos.04",
+  "apropos.05",
+  "apropos.06",
+  "apropos.07",
+  "apropos.08",
+  "apropos.09",
+  "apropos.10",
+  "apropos.11",
+  "portfolio.01",
+  "portfolio.02",
+  "livres.01",
+  "livres.02",
+  "livres.03",
+  "livres.04",
+  "livres.05",
+  "livres.06",
+  "livres.07",
+  "livres.08",
+  "livres.09",
+  "citation.01",
+  "citation.02",
+  "prestations.01",
+  "prestations.02",
+  "prestations.03",
+  "prestations.04",
+  "prestations.05",
+  "prestations.06",
+  "prestations.07",
+  "prestations.08",
+  "prestations.09",
+  "prestations.10",
+  "methode.01",
+  "methode.02",
+  "methode.03",
+  "methode.04",
+  "methode.05",
+  "methode.06",
+  "methode.07",
+  "methode.08",
+  "methode.09",
+  "contact.01",
+  "contact.02",
+  "contact.03",
+  "contact.04",
+  "contact.05",
+  "contact.06",
+  "contact.07",
+  "formulaire.01",
+  "formulaire.02",
+  "formulaire.03",
+  "formulaire.04",
+  "formulaire.05",
+  "formulaire.06",
+  "formulaire.07",
+  "formulaire.08",
+  "formulaire.09",
+  "formulaire.10",
+  "formulaire.11",
+  "footer.01",
+  "footer.02",
+  "visionneuse.01",
+  "liseuse.01"
+ ],
+ "plain": {
+  "accueil.piliers": "Luxury &nbsp;•&nbsp; Hospitality &nbsp;•&nbsp; Lifestyle",
+  "livre1.titre": "Delivering Delight",
+  "livre1.lieux": "Nespresso · ",
+  "livre2.titre": "Reactions",
+  "livre2.lieux": "One&amp;Only · Le Petit Manoir · "
+ },
+ "contact": {
+  "email": "capucinecaulliez04@gmail.com",
+  "telephone": "+41 78 352 06 18",
+  "instagram": "capucinecaulliez.studio"
+ },
+ "images": {
+  "accueil.gauche": "images/img_4496-s.webp",
+  "accueil.milieu": "images/img_4082.webp",
+  "accueil.droite": "images/img_3927-s.webp",
+  "apropos.portrait": "images/img7533.webp",
+  "citation.fond": "images/img_4496.webp"
+ },
+ "collabs": [
+  "One&Only",
+  "Le Petit Manoir",
+  "Koshka Paris",
+  "Nespresso",
+  "KLAPP"
+ ],
+ "series": [
+  {
+   "id": "city",
+   "fr": "Lumière",
+   "en": "Light",
+   "cover": "images/img_5829-s.webp"
+  },
+  {
+   "id": "desert",
+   "fr": "Textures",
+   "en": "Textures",
+   "cover": "images/img_4505-s.webp"
+  },
+  {
+   "id": "sky",
+   "fr": "Horizons",
+   "en": "Horizons",
+   "cover": "images/img_5852-s.webp"
+  },
+  {
+   "id": "taste",
+   "fr": "Saveurs",
+   "en": "Flavours",
+   "cover": "images/img_3792-s.webp"
+  },
+  {
+   "id": "manoir",
+   "fr": "Lieux de charme",
+   "en": "Charming places",
+   "cover": "images/img_7233-s.webp"
+  },
+  {
+   "id": "beauty",
+   "fr": "Beauté",
+   "en": "Beauty",
+   "cover": "images/img_klapp_1-s.webp"
+  }
+ ],
+ "photos": [
+  {
+   "s": "city",
+   "full": "images/img_5114.webp",
+   "src": "images/img_5114-s.webp",
+   "w": 720,
+   "h": 900
+  },
+  {
+   "s": "desert",
+   "full": "images/img_3951.webp",
+   "src": "images/img_3951-s.webp",
+   "w": 720,
+   "h": 900
+  },
+  {
+   "s": "taste",
+   "full": "images/img_nes_7839.webp",
+   "src": "images/img_nes_7839-s.webp",
+   "w": 900,
+   "h": 593
+  },
+  {
+   "s": "sky",
+   "full": "images/img_5852.webp",
+   "src": "images/img_5852-s.webp",
+   "w": 720,
+   "h": 900
+  },
+  {
+   "s": "beauty",
+   "full": "images/img_klapp_4.webp",
+   "src": "images/img_klapp_4-s.webp",
+   "w": 675,
+   "h": 900
+  },
+  {
+   "s": "taste",
+   "full": "images/img_nes_7952.webp",
+   "src": "images/img_nes_7952-s.webp",
+   "w": 900,
+   "h": 600
+  },
+  {
+   "s": "taste",
+   "full": "images/img_3776.webp",
+   "src": "images/img_3776-s.webp",
+   "w": 506,
+   "h": 900
+  },
+  {
+   "s": "manoir",
+   "full": "images/img_7237.webp",
+   "src": "images/img_7237-s.webp",
+   "w": 720,
+   "h": 900
+  },
+  {
+   "s": "city",
+   "full": "images/img_5124.webp",
+   "src": "images/img_5124-s.webp",
+   "w": 720,
+   "h": 900
+  },
+  {
+   "s": "taste",
+   "full": "images/img_nes_7954.webp",
+   "src": "images/img_nes_7954-s.webp",
+   "w": 900,
+   "h": 625
+  },
+  {
+   "s": "desert",
+   "full": "images/img_3953.webp",
+   "src": "images/img_3953-s.webp",
+   "w": 720,
+   "h": 900
+  },
+  {
+   "s": "beauty",
+   "full": "images/img_klapp_5.webp",
+   "src": "images/img_klapp_5-s.webp",
+   "w": 675,
+   "h": 900
+  },
+  {
+   "s": "sky",
+   "full": "images/img_5851.webp",
+   "src": "images/img_5851-s.webp",
+   "w": 720,
+   "h": 900
+  },
+  {
+   "s": "taste",
+   "full": "images/img_nes_7960.webp",
+   "src": "images/img_nes_7960-s.webp",
+   "w": 900,
+   "h": 600
+  },
+  {
+   "s": "taste",
+   "full": "images/img_3790.webp",
+   "src": "images/img_3790-s.webp",
+   "w": 506,
+   "h": 900
+  },
+  {
+   "s": "manoir",
+   "full": "images/img_7233.webp",
+   "src": "images/img_7233-s.webp",
+   "w": 720,
+   "h": 900
+  },
+  {
+   "s": "city",
+   "full": "images/img_5084.webp",
+   "src": "images/img_5084-s.webp",
+   "w": 506,
+   "h": 900
+  },
+  {
+   "s": "taste",
+   "full": "images/img_nes_8055.webp",
+   "src": "images/img_nes_8055-s.webp",
+   "w": 600,
+   "h": 900
+  },
+  {
+   "s": "desert",
+   "full": "images/img_4082.webp",
+   "src": "images/img_4082-s.webp",
+   "w": 506,
+   "h": 900
+  },
+  {
+   "s": "sky",
+   "full": "images/img_5865.webp",
+   "src": "images/img_5865-s.webp",
+   "w": 720,
+   "h": 900
+  },
+  {
+   "s": "taste",
+   "full": "images/img_3792.webp",
+   "src": "images/img_3792-s.webp",
+   "w": 506,
+   "h": 900
+  },
+  {
+   "s": "taste",
+   "full": "images/img_nes_8072.webp",
+   "src": "images/img_nes_8072-s.webp",
+   "w": 600,
+   "h": 900
+  },
+  {
+   "s": "beauty",
+   "full": "images/img_klapp_2.webp",
+   "src": "images/img_klapp_2-s.webp",
+   "w": 675,
+   "h": 900
+  },
+  {
+   "s": "manoir",
+   "full": "images/img_7240.webp",
+   "src": "images/img_7240-s.webp",
+   "w": 720,
+   "h": 900
+  },
+  {
+   "s": "city",
+   "full": "images/img_5104.webp",
+   "src": "images/img_5104-s.webp",
+   "w": 506,
+   "h": 900
+  },
+  {
+   "s": "taste",
+   "full": "images/img_nes_8086.webp",
+   "src": "images/img_nes_8086-s.webp",
+   "w": 900,
+   "h": 600
+  },
+  {
+   "s": "desert",
+   "full": "images/img_3859.webp",
+   "src": "images/img_3859-s.webp",
+   "w": 506,
+   "h": 900
+  },
+  {
+   "s": "taste",
+   "full": "images/img_3805.webp",
+   "src": "images/img_3805-s.webp",
+   "w": 506,
+   "h": 900
+  },
+  {
+   "s": "beauty",
+   "full": "images/img_klapp_6.webp",
+   "src": "images/img_klapp_6-s.webp",
+   "w": 600,
+   "h": 900
+  },
+  {
+   "s": "taste",
+   "full": "images/img_nes_8100.webp",
+   "src": "images/img_nes_8100-s.webp",
+   "w": 600,
+   "h": 900
+  },
+  {
+   "s": "manoir",
+   "full": "images/img_7229.webp",
+   "src": "images/img_7229-s.webp",
+   "w": 720,
+   "h": 900
+  },
+  {
+   "s": "city",
+   "full": "images/img_5091.webp",
+   "src": "images/img_5091-s.webp",
+   "w": 506,
+   "h": 900
+  },
+  {
+   "s": "desert",
+   "full": "images/img_3878.webp",
+   "src": "images/img_3878-s.webp",
+   "w": 506,
+   "h": 900
+  },
+  {
+   "s": "taste",
+   "full": "images/img_nes_8117.webp",
+   "src": "images/img_nes_8117-s.webp",
+   "w": 600,
+   "h": 900
+  },
+  {
+   "s": "taste",
+   "full": "images/img_3983.webp",
+   "src": "images/img_3983-s.webp",
+   "w": 506,
+   "h": 900
+  },
+  {
+   "s": "manoir",
+   "full": "images/img_7258.webp",
+   "src": "images/img_7258-s.webp",
+   "w": 720,
+   "h": 900
+  },
+  {
+   "s": "city",
+   "full": "images/img_5093.webp",
+   "src": "images/img_5093-s.webp",
+   "w": 506,
+   "h": 900
+  },
+  {
+   "s": "taste",
+   "full": "images/img_nes_8135.webp",
+   "src": "images/img_nes_8135-s.webp",
+   "w": 658,
+   "h": 900
+  },
+  {
+   "s": "desert",
+   "full": "images/img_3904.webp",
+   "src": "images/img_3904-s.webp",
+   "w": 506,
+   "h": 900
+  },
+  {
+   "s": "taste",
+   "full": "images/img_3760.webp",
+   "src": "images/img_3760-s.webp",
+   "w": 506,
+   "h": 900
+  },
+  {
+   "s": "manoir",
+   "full": "images/img_7335.webp",
+   "src": "images/img_7335-s.webp",
+   "w": 720,
+   "h": 900
+  },
+  {
+   "s": "taste",
+   "full": "images/img_nes_8222.webp",
+   "src": "images/img_nes_8222-s.webp",
+   "w": 900,
+   "h": 600
+  },
+  {
+   "s": "beauty",
+   "full": "images/img_klapp_1.webp",
+   "src": "images/img_klapp_1-s.webp",
+   "w": 675,
+   "h": 900
+  },
+  {
+   "s": "city",
+   "full": "images/img_5095.webp",
+   "src": "images/img_5095-s.webp",
+   "w": 506,
+   "h": 900
+  },
+  {
+   "s": "desert",
+   "full": "images/img_3908.webp",
+   "src": "images/img_3908-s.webp",
+   "w": 506,
+   "h": 900
+  },
+  {
+   "s": "taste",
+   "full": "images/img_nes_8224.webp",
+   "src": "images/img_nes_8224-s.webp",
+   "w": 900,
+   "h": 600
+  },
+  {
+   "s": "beauty",
+   "full": "images/img_klapp_7.webp",
+   "src": "images/img_klapp_7-s.webp",
+   "w": 675,
+   "h": 900
+  },
+  {
+   "s": "taste",
+   "full": "images/img_5130.webp",
+   "src": "images/img_5130-s.webp",
+   "w": 720,
+   "h": 900
+  },
+  {
+   "s": "taste",
+   "full": "images/img_nes_8267.webp",
+   "src": "images/img_nes_8267-s.webp",
+   "w": 900,
+   "h": 600
+  },
+  {
+   "s": "city",
+   "full": "images/img_5096.webp",
+   "src": "images/img_5096-s.webp",
+   "w": 506,
+   "h": 900
+  },
+  {
+   "s": "desert",
+   "full": "images/img_3927.webp",
+   "src": "images/img_3927-s.webp",
+   "w": 506,
+   "h": 900
+  },
+  {
+   "s": "taste",
+   "full": "images/img_5132.webp",
+   "src": "images/img_5132-s.webp",
+   "w": 720,
+   "h": 900
+  },
+  {
+   "s": "taste",
+   "full": "images/img_nes_8274.webp",
+   "src": "images/img_nes_8274-s.webp",
+   "w": 600,
+   "h": 900
+  },
+  {
+   "s": "city",
+   "full": "images/img_3729.webp",
+   "src": "images/img_3729-s.webp",
+   "w": 720,
+   "h": 900
+  },
+  {
+   "s": "desert",
+   "full": "images/img_3975.webp",
+   "src": "images/img_3975-s.webp",
+   "w": 720,
+   "h": 900
+  },
+  {
+   "s": "taste",
+   "full": "images/img_5760.webp",
+   "src": "images/img_5760-s.webp",
+   "w": 900,
+   "h": 720
+  },
+  {
+   "s": "taste",
+   "full": "images/img_nes_8276.webp",
+   "src": "images/img_nes_8276-s.webp",
+   "w": 600,
+   "h": 900
+  },
+  {
+   "s": "city",
+   "full": "images/img_3730.webp",
+   "src": "images/img_3730-s.webp",
+   "w": 720,
+   "h": 900
+  },
+  {
+   "s": "desert",
+   "full": "images/img_4155.webp",
+   "src": "images/img_4155-s.webp",
+   "w": 720,
+   "h": 900
+  },
+  {
+   "s": "city",
+   "full": "images/img_5160.webp",
+   "src": "images/img_5160-s.webp",
+   "w": 720,
+   "h": 900
+  },
+  {
+   "s": "taste",
+   "full": "images/img_nes_8280.webp",
+   "src": "images/img_nes_8280-s.webp",
+   "w": 900,
+   "h": 600
+  },
+  {
+   "s": "desert",
+   "full": "images/img_4346.webp",
+   "src": "images/img_4346-s.webp",
+   "w": 720,
+   "h": 900
+  },
+  {
+   "s": "city",
+   "full": "images/img_5208.webp",
+   "src": "images/img_5208-s.webp",
+   "w": 720,
+   "h": 900
+  },
+  {
+   "s": "beauty",
+   "full": "images/img_klapp_3.webp",
+   "src": "images/img_klapp_3-s.webp",
+   "w": 675,
+   "h": 900
+  },
+  {
+   "s": "taste",
+   "full": "images/img_nes_8283.webp",
+   "src": "images/img_nes_8283-s.webp",
+   "w": 900,
+   "h": 600
+  },
+  {
+   "s": "desert",
+   "full": "images/img_4461.webp",
+   "src": "images/img_4461-s.webp",
+   "w": 720,
+   "h": 900
+  },
+  {
+   "s": "beauty",
+   "full": "images/img_klapp_8.webp",
+   "src": "images/img_klapp_8-s.webp",
+   "w": 675,
+   "h": 900
+  },
+  {
+   "s": "city",
+   "full": "images/img_5165.webp",
+   "src": "images/img_5165-s.webp",
+   "w": 506,
+   "h": 900
+  },
+  {
+   "s": "taste",
+   "full": "images/img_nes_8287.webp",
+   "src": "images/img_nes_8287-s.webp",
+   "w": 900,
+   "h": 600
+  },
+  {
+   "s": "desert",
+   "full": "images/img_4496.webp",
+   "src": "images/img_4496-s.webp",
+   "w": 506,
+   "h": 900
+  },
+  {
+   "s": "city",
+   "full": "images/img_5309.webp",
+   "src": "images/img_5309-s.webp",
+   "w": 719,
+   "h": 900
+  },
+  {
+   "s": "desert",
+   "full": "images/img_4505.webp",
+   "src": "images/img_4505-s.webp",
+   "w": 720,
+   "h": 900
+  },
+  {
+   "s": "taste",
+   "full": "images/img_nes_8307.webp",
+   "src": "images/img_nes_8307-s.webp",
+   "w": 600,
+   "h": 900
+  },
+  {
+   "s": "city",
+   "full": "images/img_5317.webp",
+   "src": "images/img_5317-s.webp",
+   "w": 720,
+   "h": 900
+  },
+  {
+   "s": "city",
+   "full": "images/img_5330.webp",
+   "src": "images/img_5330-s.webp",
+   "w": 720,
+   "h": 900
+  },
+  {
+   "s": "city",
+   "full": "images/img_5596.webp",
+   "src": "images/img_5596-s.webp",
+   "w": 720,
+   "h": 900
+  },
+  {
+   "s": "taste",
+   "full": "images/img_nes_8321.webp",
+   "src": "images/img_nes_8321-s.webp",
+   "w": 900,
+   "h": 600
+  },
+  {
+   "s": "city",
+   "full": "images/img_5697.webp",
+   "src": "images/img_5697-s.webp",
+   "w": 506,
+   "h": 900
+  },
+  {
+   "s": "city",
+   "full": "images/img_5699.webp",
+   "src": "images/img_5699-s.webp",
+   "w": 506,
+   "h": 900
+  },
+  {
+   "s": "city",
+   "full": "images/img_5700.webp",
+   "src": "images/img_5700-s.webp",
+   "w": 506,
+   "h": 900
+  },
+  {
+   "s": "taste",
+   "full": "images/img_nes_8334.webp",
+   "src": "images/img_nes_8334-s.webp",
+   "w": 600,
+   "h": 900
+  },
+  {
+   "s": "city",
+   "full": "images/img_5724.webp",
+   "src": "images/img_5724-s.webp",
+   "w": 506,
+   "h": 900
+  },
+  {
+   "s": "beauty",
+   "full": "images/img_klapp_9.webp",
+   "src": "images/img_klapp_9-s.webp",
+   "w": 675,
+   "h": 900
+  },
+  {
+   "s": "city",
+   "full": "images/img_5729.webp",
+   "src": "images/img_5729-s.webp",
+   "w": 506,
+   "h": 900
+  },
+  {
+   "s": "taste",
+   "full": "images/img_nes_8336.webp",
+   "src": "images/img_nes_8336-s.webp",
+   "w": 900,
+   "h": 600
+  },
+  {
+   "s": "city",
+   "full": "images/img_5786.webp",
+   "src": "images/img_5786-s.webp",
+   "w": 720,
+   "h": 900
+  },
+  {
+   "s": "city",
+   "full": "images/img_5796.webp",
+   "src": "images/img_5796-s.webp",
+   "w": 720,
+   "h": 900
+  },
+  {
+   "s": "city",
+   "full": "images/img_5812.webp",
+   "src": "images/img_5812-s.webp",
+   "w": 720,
+   "h": 900
+  },
+  {
+   "s": "taste",
+   "full": "images/img_nes_8340.webp",
+   "src": "images/img_nes_8340-s.webp",
+   "w": 900,
+   "h": 600
+  },
+  {
+   "s": "city",
+   "full": "images/img_5829.webp",
+   "src": "images/img_5829-s.webp",
+   "w": 720,
+   "h": 900
+  },
+  {
+   "s": "city",
+   "full": "images/img_5842.webp",
+   "src": "images/img_5842-s.webp",
+   "w": 719,
+   "h": 900
+  }
+ ]
+}

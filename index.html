@@ -85,6 +85,7 @@ section { padding: clamp(80px, 11vw, 150px) 0; }
 .collab { border-block: 1px solid var(--line); padding: 30px 0; }
 .collab .wrap { display: flex; align-items: center; justify-content: center; gap: clamp(22px, 5vw, 70px); flex-wrap: wrap; }
 .collab .label { color: var(--muted); }
+#collabNames { display: contents; }
 .collab span.name { font-family: var(--display); font-style: italic; font-size: clamp(19px, 2vw, 24px); }
 
 /* À propos */
@@ -183,6 +184,9 @@ footer img { width: min(300px, 70vw); opacity: .9; }
 footer nav { display: flex; gap: 28px; flex-wrap: wrap; justify-content: center; }
 footer nav a { text-decoration: none; color: #E7DFD4; }
 footer small { font-size: 12px; letter-spacing: .08em; }
+footer .credit { opacity: .75; margin-top: -22px; }
+footer .credit a { color: #E7DFD4; text-decoration: underline; text-underline-offset: 3px; }
+footer .credit a:hover { opacity: .8; }
 
 /* Visionneuse */
 .lb { position: fixed; inset: 0; z-index: 60; background: rgba(238,233,225,.97); display: none; align-items: center; justify-content: center; padding: 70px 80px 60px; }
@@ -536,6 +540,7 @@ footer small { font-size: 12px; letter-spacing: .08em; }
       <a class="caps sm" data-c="instagram-footer" href="https://www.instagram.com/capucinecaulliez.studio/" target="_blank" rel="noopener">Instagram</a>
     </nav>
     <small>© 2026 Capucine Caulliez Studio · <span class="fr" data-k="footer.02">Suisse</span><span class="en">Switzerland</span></small>
+    <small class="credit"><span class="fr">Site réalisé par</span><span class="en">Website by</span> <a href="https://itrame.ch" target="_blank" rel="noopener">iTrame</a></small>
   </div>
 </footer>
 
